@@ -8,10 +8,11 @@ const NavBar = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 4rem;
   `
   const StyledLink = styled(GatsbyLink)`
     position: relative;
-    margin-left: 1rem;
+    margin-left: 3rem;
     text-decoration: none;
     color: #dad9d8;
 
@@ -52,6 +53,9 @@ const NavBar = () => {
         </StyledLink>
         <StyledLink activeClassName="active" to="/faq">
           FAQ
+        </StyledLink>
+        <StyledLink activeClassName="active" to="/gallery">
+          Gallery
         </StyledLink>
         <StyledLink activeClassName="active" to="/about">
           About me

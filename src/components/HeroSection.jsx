@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import background from "../images/hero-bg-placeholder.jpg"
-import {Container, Button} from "../styles/CustomStyles"
+import { Container, Button } from "../styles/CustomStyles"
 
 const HeroSection = () => {
   const StyledBGSection = styled.section`
@@ -25,12 +25,12 @@ const HeroSection = () => {
     font-size: 3rem;
   `
   const StyledSubHeader = styled.p`
-    color:white;
-    max-width:560px;
-    line-height:2rem;
-    margin-bottom:5rem;
+    color: white;
+    max-width: 560px;
+    line-height: 2rem;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
   `
-
 
   return (
     <StyledBGSection>

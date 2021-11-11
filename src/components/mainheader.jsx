@@ -3,18 +3,19 @@ import styled from "styled-components"
 
 import NavBar from "./NavBar"
 
-import {Container} from "../styles/CustomStyles"
+import { Container } from "../styles/CustomStyles"
 
 const MainHeader = () => {
   const StyledHeader = styled.header`
     position: fixed;
+    z-index:1000;
     top: 1rem;
     width: 100%;
     background-color: #101010a6;
   `
   const StyledContainer = styled(Container)`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   `
 
