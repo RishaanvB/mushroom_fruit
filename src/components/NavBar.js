@@ -1,6 +1,7 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 const NavBar = () => {
   const StyledNavigationBar = styled.nav`
@@ -37,23 +38,26 @@ const NavBar = () => {
     }
   `
   return (
-    <StyledNavigationBar>
-      <StyledLink activeClassName="active" to="/">
-        Home
-      </StyledLink>
-      <StyledLink activeClassName="active" to="/how-it-grows">
-        How it grows
-      </StyledLink>
-      <StyledLink activeClassName="active" to="/consuming-reishi">
-        Consuming reishi
-      </StyledLink>
-      <StyledLink activeClassName="active" to="/faq">
-        FAQ
-      </StyledLink>
-      <StyledLink activeClassName="active" to="/about">
-        About me
-      </StyledLink>
-    </StyledNavigationBar>
+    <>
+      <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
+      <StyledNavigationBar>
+        <StyledLink activeClassName="active" to="/">
+          Home
+        </StyledLink>
+        <StyledLink activeClassName="active" to="/how-it-grows">
+          How it grows
+        </StyledLink>
+        <StyledLink activeClassName="active" to="/consuming-reishi">
+          Consuming reishi
+        </StyledLink>
+        <StyledLink activeClassName="active" to="/faq">
+          FAQ
+        </StyledLink>
+        <StyledLink activeClassName="active" to="/about">
+          About me
+        </StyledLink>
+      </StyledNavigationBar>
+    </>
   )
 }
 

@@ -8,34 +8,16 @@ import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
 import StyledBackgroundSection from "../components/BackgroundSection"
-import background from "../images/hero-bg-placeholder.jpg"
+import HeroSection from "../components/HeroSection"
 
 const IndexPage = () => {
-  const StyledHeroSection = styled.section`
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-image: url(${background});
-    background-position: center right;
-    display: flex;
-    align-items: center;
-  `
+  
 
   return (
     <Layout pageTitle="MushroomFruit | Home">
-      <StyledHeroSection>
-        <div>
-          <h1>Grow your own mushroom!</h1>
-          <p>
-            Now is your chance! With the Reishi Growkit from Mushroomfruit,
-            growing indoors has never been easier !
-          </p>
-          <button>Order here!</button>
-        </div>
-      </StyledHeroSection>
-      <h1>outside background</h1>
-
-      <StyledHeroSection>
+      
+      <HeroSection />
+      <div>
         <h1>How it works</h1>
         <div>
           <StaticImage src="../images/reishi-homepage.png" alt="reishi" />
@@ -50,7 +32,7 @@ const IndexPage = () => {
             </section>
           </div>
         </div>
-      </StyledHeroSection>
+      </div>
     </Layout>
   )
 }

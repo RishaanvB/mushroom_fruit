@@ -1,27 +1,27 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import NavBar from "./NavBar"
 
-import StyledContainer from  '../styles/container'
+import {Container} from "../styles/CustomStyles"
 
 const MainHeader = () => {
   const StyledHeader = styled.header`
     position: fixed;
     top: 1rem;
-    width:100%;
+    width: 100%;
     background-color: #101010a6;
-    padding: 0 2rem;
   `
-
-
+  const StyledContainer = styled(Container)`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `
 
   return (
     <StyledHeader>
       <StyledContainer>
-        <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
-       <NavBar />
+        <NavBar />
       </StyledContainer>
     </StyledHeader>
   )
