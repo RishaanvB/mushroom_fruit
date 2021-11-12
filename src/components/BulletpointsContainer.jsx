@@ -5,7 +5,7 @@ import {
   GiSuperMushroom,
   GiSpottedMushroom,
   GiTrunkMushroom,
-} from "../../node_modules/react-icons/gi"
+} from "react-icons/gi"
 
 const BulletpointsContainer = () => {
   const StyledBulletpointsContainer = styled.div`
