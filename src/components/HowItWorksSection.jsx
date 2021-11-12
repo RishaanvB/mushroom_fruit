@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
-import { Container } from "../styles/CustomStyles"
+import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import HowItWorksContainer from "./HowItWorksContainer"
 import background from "../images/background-image-how-it-works.png"
 
@@ -17,23 +16,7 @@ const HowItWorksSection = () => {
     align-items: center;
     background-attachment: fixed;
   `
-  const UnderlineHeader = styled.h1`
-    /* margin-top: 7rem; */
-    margin-bottom: 4rem;
-    position: relative;
-    color: white;
-    width: max-content;
 
-    &::before {
-      position: absolute;
-      content: "";
-      background-color: #f3bc77;
-      height: 5px;
-      width: 70%;
-      bottom: -10px;
-      left: 0;
-    }
-  `
 
   return (
     <StyledBGSection>
