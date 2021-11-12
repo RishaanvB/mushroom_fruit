@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 
 import background from "../images/bg-reishi-benefits-mainpage.png"
-import { GiSlicedMushroom, GiMushrooms } from "react-icons/gi"
+import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
 
 const StyledBGSection = styled.section`
@@ -25,7 +25,6 @@ const StyledBenefitContainer = styled.section`
   max-width: 30rem;
   padding: 4rem 0;
 `
-const RightContainer = styled(StyledBenefitContainer)``
 const StyledSmallHeader = styled.h1`
   margin: 0;
   font-size: 1.5rem;
