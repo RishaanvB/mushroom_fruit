@@ -13,7 +13,7 @@ const HowItWorksContainer = () => {
     <StyledHowItWorksContainer>
       <StaticImage
         src="../images/reishi-homepage.png"
-        alt="grown reishi in bag sprouted outwards on warm background"
+        alt="grown reishi in bag sprouted outwards on warm-colored background"
       />
       <BulletpointsContainer />
     </StyledHowItWorksContainer>

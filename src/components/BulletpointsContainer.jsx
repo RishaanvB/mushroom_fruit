@@ -5,16 +5,15 @@ import {
   GiSuperMushroom,
   GiSpottedMushroom,
   GiTrunkMushroom,
-} from "react-icons/Gi"
+} from "../../node_modules/react-icons/gi"
 
-import { FaTwitter } from "react-icons/fa"
 const BulletpointsContainer = () => {
   const StyledBulletpointsContainer = styled.div`
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     margin-left: 5rem;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
   `
 
   const BulletpointsSection = styled.section`
@@ -27,7 +26,7 @@ const BulletpointsContainer = () => {
     color: white;
     font-size: 1.2rem;
     grid-column: 2;
-    margin-bottom:0;
+    margin-bottom: 0;
   `
   const StyledSubtext = styled.p`
     color: white;
