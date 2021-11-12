@@ -11,9 +11,10 @@ const BulletpointsContainer = () => {
   const StyledBulletpointsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     align-items: center;
     justify-content: space-between;
+    align-self:center;
   `
 
   const BulletpointsSection = styled.section`
@@ -21,6 +22,8 @@ const BulletpointsContainer = () => {
     grid-template-columns: 2;
     grid-template-rows: 2;
     grid-column-gap: 10px;
+    margin-bottom:1rem;
+    margin-top:1rem;
   `
   const StyledHeader = styled.h1`
     color: white;
@@ -32,6 +35,7 @@ const BulletpointsContainer = () => {
     color: white;
     font-size: 0.9rem;
     grid-column: 2;
+    margin:0;
   `
 
   return (

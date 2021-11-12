@@ -33,10 +33,13 @@ const StyledSmallHeader = styled.h1`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width:clamp(420px, 60%, 80%);
+
 `
 const StyledInfoText = styled.p`
   color: white;
   margin-top: 2.5rem;
+  max-width:clamp(420px, 60%, 80%);
 `
 
 const StyledContainer = styled(Container)`

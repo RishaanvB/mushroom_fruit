@@ -7,7 +7,8 @@ const HowItWorksContainer = () => {
   const StyledHowItWorksContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+    column-gap:4rem;
   `
   return (
     <StyledHowItWorksContainer>
