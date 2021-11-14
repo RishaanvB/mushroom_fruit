@@ -5,7 +5,6 @@ import NavBar from "./NavBar"
 
 import { Container } from "../styles/CustomStyles"
 
-const MainHeader = () => {
   const StyledHeader = styled.header`
     position: fixed;
     z-index:1000;
@@ -18,6 +17,7 @@ const MainHeader = () => {
     justify-content: flex-start;
     align-items: center;
   `
+const MainHeader = () => {
 
   return (
     <StyledHeader>

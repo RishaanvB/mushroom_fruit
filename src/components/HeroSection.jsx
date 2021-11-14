@@ -3,7 +3,6 @@ import styled from "styled-components"
 import background from "../images/hero-bg-placeholder.jpg"
 import { Container, Button } from "../styles/CustomStyles"
 
-const HeroSection = () => {
   const StyledBGSection = styled.section`
     width: 100%;
     height: 100vh;
@@ -31,6 +30,7 @@ const HeroSection = () => {
     margin-bottom: 5rem;
     font-size: 1.2rem;
   `
+const HeroSection = () => {
 
   return (
     <StyledBGSection>

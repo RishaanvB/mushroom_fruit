@@ -7,8 +7,7 @@ import {
   GiTrunkMushroom,
 } from "react-icons/gi"
 
-const BulletpointsContainer = () => {
-  const StyledBulletpointsContainer = styled.div`
+const StyledBulletpointsContainer = styled.div`
     display: flex;
     flex-direction: column;
     /* margin-left: 5rem; */
@@ -37,6 +36,9 @@ const BulletpointsContainer = () => {
     grid-column: 2;
     margin:0;
   `
+
+const BulletpointsContainer = () => {
+  
 
   return (
     <StyledBulletpointsContainer>

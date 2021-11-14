@@ -33,13 +33,12 @@ const StyledSmallHeader = styled.h1`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width:clamp(420px, 60%, 80%);
-
+  max-width: clamp(420px, 60%, 80%);
 `
 const StyledInfoText = styled.p`
   color: white;
   margin-top: 2.5rem;
-  max-width:clamp(420px, 60%, 80%);
+  max-width: clamp(420px, 60%, 80%);
 `
 
 const StyledContainer = styled(Container)`
@@ -49,7 +48,7 @@ const StyledContainer = styled(Container)`
 `
 const StyledButton = styled(Button)`
   align-self: flex-start;
-  margin-top:3rem;
+  margin-top: 3rem;
 `
 const ReishiBenefitsSection = () => {
   return (

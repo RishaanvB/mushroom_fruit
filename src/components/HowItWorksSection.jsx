@@ -4,7 +4,6 @@ import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import HowItWorksContainer from "./HowItWorksContainer"
 import background from "../images/background-image-how-it-works.png"
 
-const HowItWorksSection = () => {
   const StyledBGSection = styled.section`
     width: 100%;
     height: 100vh;
@@ -16,6 +15,7 @@ const HowItWorksSection = () => {
     align-items: center;
     background-attachment: fixed;
   `
+const HowItWorksSection = () => {
 
 
   return (

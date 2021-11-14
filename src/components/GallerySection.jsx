@@ -4,7 +4,6 @@ import background from "../images/bg-gallery-photo.png"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 import ImageListIndexPage from "./ImageListIndexPage"
 
-const GallerySection = () => {
   const StyledBGSection = styled.section`
     width: 100%;
     height: 100%;
@@ -28,6 +27,7 @@ const GallerySection = () => {
     margin-top:6rem;
     margin-bottom:6rem;
   `
+const GallerySection = () => {
   return (
     <>
       <StyledBGSection>

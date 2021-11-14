@@ -1,27 +1,34 @@
 import React from "react"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
-export default function ImageListIndexPage() {
   const ImageList = styled.div`
     width: 100%;
     margin-top: 6rem;
     margin-bottom: 4rem;
     display: grid;
-    justify-items: center;
+    justify-items: stretch;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 1fr;
     grid-column-gap: 1rem;
   `
-  const ImageListItem = styled.div``
+  const ImageListItem = styled.figure`
+    box-shadow: 5px 5px 10px 10px black;
+  `
+  const styledImg = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  `
+export default function ImageListIndexPage() {
 
   return (
     <ImageList>
       {itemData.map(item => (
         <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=228&h=228&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=228&h=228&fit=crop&auto=format&dpr=2 2x`}
+          <StaticImage
+            src={`${item.img}`}
             alt={item.title}
             loading="lazy"
           />

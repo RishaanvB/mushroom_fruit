@@ -3,7 +3,6 @@ import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
-const NavBar = () => {
   const StyledNavigationBar = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -38,6 +37,7 @@ const NavBar = () => {
       width: 70%;
     }
   `
+const NavBar = () => {
   return (
     <>
       <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
