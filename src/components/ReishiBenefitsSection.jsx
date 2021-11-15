@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 
-import background from "../images/bg-reishi-benefits-mainpage.png"
+import background from "../images/bg-reishi-benefits-mainpage.webp"
 import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
 

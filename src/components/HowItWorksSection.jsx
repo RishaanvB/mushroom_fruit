@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import HowItWorksContainer from "./HowItWorksContainer"
-import background from "../images/background-image-how-it-works.png"
+import background from "../images/background-image-how-it-works.webp"
 
   const StyledBGSection = styled.section`
     width: 100%;
