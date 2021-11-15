@@ -4,7 +4,7 @@ import Footer from "./Footer"
 import "./layout.css"
 
 const Layout = ({ children, pageTitle }) => {
-  useEffect(() => (document.title = pageTitle))
+  useEffect(() => (document.title = pageTitle || 'mushy'))
 
   return (
     <>
