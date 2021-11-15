@@ -7,11 +7,10 @@ import { StaticImage } from "gatsby-plugin-image"
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 4rem;
+    column-gap:1rem;
   `
   const StyledLink = styled(GatsbyLink)`
     position: relative;
-    margin-left: 3rem;
     text-decoration: none;
     color: #dad9d8;
 

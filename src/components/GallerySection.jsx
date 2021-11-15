@@ -10,8 +10,8 @@ const StyledBGSection = styled.section`
   width: 100%;
   height: 100%;
   background-size: cover;
-    background-image: url(${background});
-    background-position: center center;
+  background-image: url(${background});
+  background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;

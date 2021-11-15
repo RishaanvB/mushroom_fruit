@@ -1,6 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
-import BridgeTest from '../components/BridgeTest'
+import Layout from "../components/Layout"
 const HowItGrows = () => {
   return (
     <Layout id="main">
@@ -54,7 +53,6 @@ const HowItGrows = () => {
             </p>
           </section>
         </div>
-      <BridgeTest />
 
         {/* <!-- background switch images --> */}
         <div class="first-bg bg-fader active-bg" id="first-bg"></div>
