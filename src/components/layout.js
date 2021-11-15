@@ -2,7 +2,7 @@ import React from "react"
 import { useEffect } from "react"
 import "./layout.css"
 import MainHeader from "./mainheader"
-import Footer from "./Footer"
+import Footer from "./footer"
 
 const Layout = ({ children, pageTitle }) => {
   return (
