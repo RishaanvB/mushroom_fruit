@@ -2,16 +2,16 @@ import React from "react"
 import Layout from "../components/layout"
 const ConsumingReishi = () => {
   return (
-    <Layout id="Layout">
-      <header class="consuming-reishi-banner">
-        <h1 class="onload">
-          <i class="bi bi-cup"></i> consuming reishi
+    <Layout>
+      <header className="consuming-reishi-banner">
+        <h1 className="onload">
+          <i className="bi bi-cup"></i> consuming reishi
         </h1>
       </header>
 
-      <div class="consuming-reishi-container">
+      <div className="consuming-reishi-container">
         <h1>how to consume</h1>
-        <p class="consuming-reishi-container__intro">
+        <p className="consuming-reishi-container__intro">
           Consuming a Reishi mushroom is different from consuming just about any
           other mushroom. This is because of the very rigid texture of the
           Reishi fruiting body: In its dried state it is just as tough as a
@@ -34,11 +34,11 @@ const ConsumingReishi = () => {
           daily cup o’ coffee.
         </p>
 
-        <div class="consuming-reishi-container__img-container">
+        <div className="consuming-reishi-container__img-container">
           <img src="../Assets/placeholder images/image3.jpg" alt="" />
         </div>
 
-        <p class="consuming-reishi-container__text">
+        <p className="consuming-reishi-container__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
           adipisci et consectetur earum praesentium id architecto iusto ab unde,
           esse corrupti vel suscipit consequatur quia eligendi necessitatibus
@@ -78,8 +78,8 @@ const ConsumingReishi = () => {
           veritatis hic dolor accusamus!
         </p>
 
-        <figure class="consuming-reishi-container__table">
-          <p class="consuming-reishi-container__table-intro">
+        <figure className="consuming-reishi-container__table">
+          <p className="consuming-reishi-container__table-intro">
             On this page “Consuming Reishi”, I will also dive deeper into the
             health effects of Reishi, which will be accompanied with the
             following table:

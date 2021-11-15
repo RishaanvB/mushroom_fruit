@@ -1,11 +1,10 @@
-import React, { useEffect } from "react"
-import MainHeader from "./MainHeader"
-import Footer from "./Footer"
+import React from "react"
+import { useEffect } from "react"
 import "./layout.css"
+import MainHeader from "./mainheader"
+import Footer from "./Footer"
 
 const Layout = ({ children, pageTitle }) => {
-  useEffect(() => (document.title = pageTitle || 'mushy'))
-
   return (
     <>
       <MainHeader />

@@ -2,15 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 const HowItGrows = () => {
   return (
-    <Layout id="main">
-      <header class="how-it-grows-banner">
-        <h1 class="onload">
-          <i class="fas fa-seedling"></i>how it grows
+    <Layout>
+      <header className="how-it-grows-banner">
+        <h1 className="onload">
+          <i className="fas fa-seedling"></i>how it grows
         </h1>
       </header>
-      <div id="bg-switch" class="how-it-grows-section-container">
-        <div class="fader-container">
-          <section id="fader1" class="fader-container__faders faders">
+      <div id="bg-switch" className="how-it-grows-section-container">
+        <div className="fader-container">
+          <section id="fader1" className="fader-container__faders faders">
             <h1>Titel 1</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -24,8 +24,8 @@ const HowItGrows = () => {
           </section>
         </div>
 
-        <div class="fader-container">
-          <section id="fader2" class="fader-container__faders faders">
+        <div className="fader-container">
+          <section id="fader2" className="fader-container__faders faders">
             <h1>Titel 2</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -39,8 +39,8 @@ const HowItGrows = () => {
           </section>
         </div>
 
-        <div class="fader-container">
-          <section id="fader3" class="fader-container__faders faders">
+        <div className="fader-container">
+          <section id="fader3" className="fader-container__faders faders">
             <h1>Titel 3</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -55,9 +55,9 @@ const HowItGrows = () => {
         </div>
 
         {/* <!-- background switch images --> */}
-        <div class="first-bg bg-fader active-bg" id="first-bg"></div>
-        <div class="second-bg bg-fader" id="second-bg"></div>
-        <div class="third-bg bg-fader" id="third-bg"></div>
+        <div className="first-bg bg-fader active-bg" id="first-bg"></div>
+        <div className="second-bg bg-fader" id="second-bg"></div>
+        <div className="third-bg bg-fader" id="third-bg"></div>
       </div>
     </Layout>
   )
