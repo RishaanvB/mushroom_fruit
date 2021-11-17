@@ -3,12 +3,12 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import BulletpointsContainer from "./BulletpointsContainer"
 
-  const StyledHowItWorksContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    column-gap:4rem;
-  `
+const StyledHowItWorksContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: 4rem;
+`
 const HowItWorksContainer = () => {
   return (
     <StyledHowItWorksContainer>

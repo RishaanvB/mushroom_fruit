@@ -8,7 +8,7 @@ const StyledBGSection = styled.section`
   height: 100vh;
   background-size: cover;
   background-image: url(${background});
-  background-color:#302C28;
+  background-color: #302c28;
   background-position: center right;
   display: flex;
   justify-content: flex-start;

@@ -1,23 +1,46 @@
 import React from "react"
 import Layout from "../components/layout"
+import styled from "styled-components"
+import background from "../images/consuming-reishi-bg-placeholder.png"
+import LayoutBackground from "../styles/LayoutBackground"
+import { Container, UnderlineHeader } from "../styles/CustomStyles"
+import { StaticImage } from "gatsby-plugin-image"
+import DenseTable from "../components/DenseTable"
+
+const StyledContainer = styled(Container)`
+  max-width: 730px;
+`
+const StyledHeader = styled(UnderlineHeader)`
+  color: black;
+  margin-top: 3rem;
+`
+const StyledFirstP = styled.p`
+  font-weight: 500;
+  &::first-letter {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+`
+const StyledIntroTableParagraph = styled.p`
+  font-style: italic;
+`
+
 const ConsumingReishi = () => {
+  const headerText = "consuming reishi"
   return (
     <Layout>
-      <header className="consuming-reishi-banner">
-        <h1 className="onload">
-          <i className="bi bi-cup"></i> consuming reishi
-        </h1>
-      </header>
+      <LayoutBackground background={background} headerText={headerText} />
+      <StyledContainer>
+        <StyledHeader>How to consume</StyledHeader>
 
-      <div className="consuming-reishi-container">
-        <h1>how to consume</h1>
-        <p className="consuming-reishi-container__intro">
+        <StyledFirstP>
           Consuming a Reishi mushroom is different from consuming just about any
           other mushroom. This is because of the very rigid texture of the
           Reishi fruiting body: In its dried state it is just as tough as a
           piece of wood. For this reason, people have found methods to extract
           the compounds of interest out of the Reishi mushroom.
-        </p>
+        </StyledFirstP>
+
         <p>
           The most commonly used method is by boiling pieces of the Reishi
           mushroom in water. To get most of the compounds out of the mushroom,
@@ -34,36 +57,11 @@ const ConsumingReishi = () => {
           daily cup o’ coffee.
         </p>
 
-        <div className="consuming-reishi-container__img-container">
-          <img src="../Assets/placeholder images/image3.jpg" alt="" />
-        </div>
-
-        <p className="consuming-reishi-container__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-          adipisci et consectetur earum praesentium id architecto iusto ab unde,
-          esse corrupti vel suscipit consequatur quia eligendi necessitatibus
-          optio nisi maxime soluta possimus eum illum ipsam neque ullam! Magni
-          ducimus soluta quod aspernatur natus ut quisquam, officiis atque hic
-          similique eligendi rem sapiente excepturi doloremque quo consectetur
-          veritatis iure eius odio earum quibusdam voluptatibus non. Cupiditate
-          laboriosam corporis, blanditiis sit illum eaque architecto id quia
-          asperiores. Quae asperiores animi ab, ducimus saepe at id eaque quos
-          velit illo eum, unde error sit? Quas quo ducimus asperiores similique
-          officia delectus odit consequuntur?
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vitae,
-          cumque nostrum error minima quod, quos totam aperiam nisi vel
-          perspiciatis necessitatibus nulla dicta! Asperiores facere corrupti
-          laborum aperiam laudantium! Sapiente voluptatibus aliquam vel eaque
-          error quisquam, natus sed iste omnis, minima nam molestiae,
-          consequatur et minus ipsa laboriosam rem ratione totam. Officia ad
-          iste excepturi dolor nihil molestiae id cumque eos. Aliquam provident
-          ab deleniti recusandae at maxime modi! Omnis iusto iste eum nobis,
-          voluptate reprehenderit deserunt dolor a doloremque magnam deleniti
-          impedit
-        </p>
+        <StaticImage
+          src="../images/reishi-homepage.png"
+          alt="grown reishi in bag sprouted outwards on warm-colored background"
+          style={{margin:'2rem auto'}}
+        />
         <p>
           Officia culpa eos illum maiores maxime ullam eaque sint iure
           consequatur odio corporis ad. Deleniti iure ad eos necessitatibus
@@ -78,39 +76,43 @@ const ConsumingReishi = () => {
           veritatis hic dolor accusamus!
         </p>
 
-        <figure className="consuming-reishi-container__table">
-          <p className="consuming-reishi-container__table-intro">
-            On this page “Consuming Reishi”, I will also dive deeper into the
-            health effects of Reishi, which will be accompanied with the
-            following table:
-          </p>
-          <img
-            src="../Content/mushroom_studies_health_related_cropped.png"
-            alt=""
-          />
-          <figcaption>
-            <small>
-              Table with PubMed results – results found on 7 April 2021.
-              Mushroom species was combined with the health related term in the
-              regular search function.
-            </small>
-          </figcaption>
-        </figure>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
-          accusamus vero voluptatum mollitia quas obcaecati. Impedit soluta,
-          quibusdam totam suscipit iure, sequi fugiat veniam qui ipsam rem,
-          tenetur eum quo quaerat. Maxime accusantium eum corporis? Magnam
-          labore sit sapiente vitae molestiae, neque quas aut reprehenderit
-          perspiciatis vero natus commodi ad. Ratione perferendis totam repellat
-          eum reprehenderit iusto a? Quis officiis praesentium possimus
-          cupiditate libero omnis, eius ratione expedita numquam soluta, nemo
-          perferendis doloremque eos, recusandae voluptatem quos officia!
-          Nostrum accusamus rem deserunt voluptates nihil ipsum! Dicta maiores a
-          tempora doloribus nisi et aliquam quibusdam animi. Quis id magni
-          tempora perferendis?
-        </p>
-      </div>
+        <StyledIntroTableParagraph>
+          On this page “Consuming Reishi”, I will also dive deeper into the
+          health effects of Reishi, which will be accompanied with the following
+          table:
+        </StyledIntroTableParagraph>
+      </StyledContainer>
+      <Container>
+        <DenseTable />
+
+      </Container>
+
+      <figure className="consuming-reishi-container__table">
+        <img
+          src="../Content/mushroom_studies_health_related_cropped.png"
+          alt=""
+        />
+        <figcaption>
+          <small>
+            Table with PubMed results – results found on 7 April 2021. Mushroom
+            species was combined with the health related term in the regular
+            search function.
+          </small>
+        </figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+        accusamus vero voluptatum mollitia quas obcaecati. Impedit soluta,
+        quibusdam totam suscipit iure, sequi fugiat veniam qui ipsam rem,
+        tenetur eum quo quaerat. Maxime accusantium eum corporis? Magnam labore
+        sit sapiente vitae molestiae, neque quas aut reprehenderit perspiciatis
+        vero natus commodi ad. Ratione perferendis totam repellat eum
+        reprehenderit iusto a? Quis officiis praesentium possimus cupiditate
+        libero omnis, eius ratione expedita numquam soluta, nemo perferendis
+        doloremque eos, recusandae voluptatem quos officia! Nostrum accusamus
+        rem deserunt voluptates nihil ipsum! Dicta maiores a tempora doloribus
+        nisi et aliquam quibusdam animi. Quis id magni tempora perferendis?
+      </p>
     </Layout>
   )
 }
