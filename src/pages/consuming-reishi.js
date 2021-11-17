@@ -5,7 +5,7 @@ import background from "../images/consuming-reishi-bg-placeholder.png"
 import LayoutBackground from "../styles/LayoutBackground"
 import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import { StaticImage } from "gatsby-plugin-image"
-import DenseTable from "../components/DenseTable"
+import TestTable from "../components/TestTable"
 
 const StyledContainer = styled(Container)`
   max-width: 730px;
@@ -83,7 +83,7 @@ const ConsumingReishi = () => {
         </StyledIntroTableParagraph>
       </StyledContainer>
       <Container>
-        <DenseTable />
+        <TestTable />
 
       </Container>
 
