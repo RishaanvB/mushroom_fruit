@@ -1,7 +1,7 @@
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "styled-components"
-
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs"
 
 import Button from "@mui/material/Button"
 
@@ -36,6 +36,27 @@ const StyledHeader = styled.h1`
   color: black;
   margin: 0;
 `
+
+const StyledLeftArrow = styled(BsArrowLeftCircle)`
+  font-size: clamp(3rem, 4rem, 5rem);
+  cursor: pointer;
+  color: #f3bc77;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: #96744c;
+    transform: scale(1.1);
+  }
+`
+const StyledRightArrow = styled(BsArrowRightCircle)`
+  font-size: clamp(3rem, 4rem, 5rem);
+  cursor: pointer;
+  color: #f3bc77;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: #96744c;
+    transform: scale(1.1);
+  }
+`
 const InfoSection = ({ number, handleBack, handleNext }) => {
   const imageData = [
     <StaticImage
@@ -63,11 +84,8 @@ const InfoSection = ({ number, handleBack, handleNext }) => {
   return (
     <Container>
       {imageData[number]}
-      <Button color="inherit" onClick={handleBack}>
-        Back
-      </Button>
+      <StyledLeftArrow onClick={handleBack}>Back</StyledLeftArrow>
       <StyledInfoSection>
-
         <HeaderContainer>
           <StyledHeader>{headerData[number]}</StyledHeader>
           <Line></Line>
@@ -78,7 +96,7 @@ const InfoSection = ({ number, handleBack, handleNext }) => {
         </p>
         <p>{pData[number]}</p>
       </StyledInfoSection>
-      <Button onClick={handleNext}>Next</Button>
+      <StyledRightArrow onClick={handleNext}>Next</StyledRightArrow>
     </Container>
   )
 }
