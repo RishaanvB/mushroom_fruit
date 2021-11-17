@@ -1,11 +1,15 @@
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "styled-components"
+
+
+import Button from "@mui/material/Button"
+
 const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  column-gap: 7rem;
+  column-gap: 3rem;
   margin-bottom: 4rem;
 `
 const StyledInfoSection = styled.section`
@@ -15,7 +19,7 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   column-gap: 1rem;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
 `
 const Line = styled.span`
   height: 1.8px;
@@ -32,7 +36,7 @@ const StyledHeader = styled.h1`
   color: black;
   margin: 0;
 `
-const InfoSection = ({ number }) => {
+const InfoSection = ({ number, handleBack, handleNext }) => {
   const imageData = [
     <StaticImage
       width={680}
@@ -59,7 +63,11 @@ const InfoSection = ({ number }) => {
   return (
     <Container>
       {imageData[number]}
+      <Button color="inherit" onClick={handleBack}>
+        Back
+      </Button>
       <StyledInfoSection>
+
         <HeaderContainer>
           <StyledHeader>{headerData[number]}</StyledHeader>
           <Line></Line>
@@ -70,6 +78,7 @@ const InfoSection = ({ number }) => {
         </p>
         <p>{pData[number]}</p>
       </StyledInfoSection>
+      <Button onClick={handleNext}>Next</Button>
     </Container>
   )
 }

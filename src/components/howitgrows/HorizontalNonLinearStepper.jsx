@@ -4,7 +4,6 @@ import Stepper from "@mui/material/Stepper"
 import Step from "@mui/material/Step"
 import StepButton from "@mui/material/StepButton"
 import Button from "@mui/material/Button"
-import Typography from "@mui/material/Typography"
 import styled from "styled-components"
 
 import InfoSection from "./InfoSection"
@@ -36,7 +35,7 @@ export default function HorizontalNonLinearStepper() {
   }
 
   const handleBack = () => {
-    const newActiveStep = isFirstStep() ? 2 : activeStep - 1
+    const newActiveStep = isFirstStep() ? totalSteps() - 1 : activeStep - 1
 
     setActiveStep(newActiveStep)
   }
@@ -57,17 +56,10 @@ export default function HorizontalNonLinearStepper() {
             </Step>
           ))}
         </Stepper>
-        <div>
-          <React.Fragment>
-            <Button color="inherit" onClick={handleBack}>
-              Back
-            </Button>
-            <Button onClick={handleNext}>Next</Button>
-          </React.Fragment>
-        </div>
+       
       </StyledBox>
 
-      <InfoSection number={activeStep} />
+      <InfoSection number={activeStep} handleNext={handleNext} handleBack={handleBack} />
     </>
   )
 }
