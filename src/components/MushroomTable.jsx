@@ -18,6 +18,9 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight"
 import LastPageIcon from "@mui/icons-material/LastPage"
 import { styled as MUIStyled } from "@mui/material/styles"
 
+/* cellHeader order is depending on data from graphql order, 
+so if you change this, also change it in the graphql query to match it.
+Or data won't be accurate for table */
 const cellHeaders = [
   "Species",
   "Common name",

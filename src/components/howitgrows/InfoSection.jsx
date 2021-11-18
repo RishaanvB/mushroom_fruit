@@ -59,25 +59,15 @@ const StyledRightArrow = styled(BsArrowRightCircle)`
 `
 const InfoSection = ({ number, handleBack, handleNext }) => {
   const imageData = [
-    <StaticImage
-      width={680}
-      aspectRatio={1}
-      src="./placeholder-1.png"
-      alt=""
-    />,
+    <StaticImage width={680} aspectRatio={1} src="placeholder-1.png" alt="" />,
     <StaticImage
       width={680}
       aspectRatio={1}
       fit="cover"
-      src="./placeholder-2.png"
-      alt=""
+      src="placeholder-2.png"
+      alt="placeholder"
     />,
-    <StaticImage
-      width={680}
-      aspectRatio={1}
-      src="./placeholder-3.png"
-      alt=""
-    />,
+    <StaticImage width={680} aspectRatio={1} src="placeholder-3.png" alt="" />,
   ]
   const headerData = ["Phase One", "Phase Two", "Phase Three"]
   const pData = ["Phase One text", "Phase Two TEXT", "Phase Three TEXT"]
