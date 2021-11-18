@@ -36,7 +36,7 @@ const StyledBottomP = styled.p`
 const ConsumingReishi = () => {
   const headerText = "consuming reishi"
   return (
-    <Layout>
+    <Layout pageTitle="Consuming reishi">
       <LayoutBackground background={background} headerText={headerText} />
       <StyledContainer>
         <StyledHeader>How to consume</StyledHeader>

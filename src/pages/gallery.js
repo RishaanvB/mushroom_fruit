@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 const Gallery = () => {
   return (
-    <Layout className="gallery-main" id="main">
+    <Layout pageTitle="Gallery">
       <header className="gallery-banner">
         <h1 className="onload">
           <i className="bi bi-camera"></i>gallery

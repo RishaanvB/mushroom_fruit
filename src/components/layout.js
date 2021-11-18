@@ -5,6 +5,7 @@ import MainHeader from "./mainheader"
 import Footer from "./footer"
 
 const Layout = ({ children, pageTitle }) => {
+  useEffect(()=> document.title = `Mushroom Fruit | ${pageTitle}` || "Mushroom Fruit")
   return (
     <>
       <MainHeader />

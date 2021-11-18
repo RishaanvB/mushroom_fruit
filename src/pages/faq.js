@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 
 const Faq = () => {
   return (
-    <Layout>
+    <Layout pageTitle='FAQ'>
       <header className="faq-banner">
         <h1 className="onload">
           <i className="far fa-comment comment-small"></i> frequently asked

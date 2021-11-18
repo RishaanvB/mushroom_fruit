@@ -10,7 +10,7 @@ import background from "../images/banner-howitworks.png"
 const HowItGrows = () => {
   const headerText = "how it grows"
   return (
-    <Layout>
+    <Layout pageTitle="How it grows">
       <LayoutBackground background={background} headerText={headerText} />
       <Container>
         <HorizontalNonLinearStepper />

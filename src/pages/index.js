@@ -8,7 +8,7 @@ import GallerySection from "../components/GallerySection"
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="MushroomFruit | Home">
+    <Layout pageTitle="Home">
       <HeroSection />
       <HowItWorksSection />
       <ReishiBenefitsSection />
