@@ -155,6 +155,18 @@ export default function TestTable() {
           size="small"
           aria-label="a dense health related mushroom info table"
         >
+          <caption
+            style={{
+              padding: "0",
+              margin: "0",
+              fontSize: ".8rem",
+              maxWidth: "560px",
+            }}
+          >
+            Table with PubMed results – results found on 7 April 2021. Mushroom
+            species was combined with the health related term in the regular
+            search function.
+          </caption>
           <TableHead>
             <StyledTableHeader>
               {cellHeaders.map(header => (
