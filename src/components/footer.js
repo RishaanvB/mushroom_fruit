@@ -14,6 +14,7 @@ const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 4rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   column-gap: 3rem;
