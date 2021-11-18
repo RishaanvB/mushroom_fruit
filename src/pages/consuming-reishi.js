@@ -5,7 +5,7 @@ import background from "../images/consuming-reishi-bg-placeholder.png"
 import LayoutBackground from "../styles/LayoutBackground"
 import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import { StaticImage } from "gatsby-plugin-image"
-import TestTable from "../components/TestTable"
+import MushroomTable from "../components/MushroomTable"
 
 const StyledContainer = styled(Container)`
   max-width: 730px;
@@ -19,12 +19,20 @@ const StyledFirstP = styled.p`
   &::first-letter {
     font-size: 1.4rem;
     font-weight: 500;
+    margin: 1rem auto;
   }
 `
 const StyledIntroTableParagraph = styled.p`
   font-style: italic;
+  margin: 1rem auto;
 `
-
+const StyledTableSub = styled.small`
+  display: block;
+  margin: 1rem auto;
+`
+const StyledBottomP = styled.p`
+  margin: 2rem auto;
+`
 const ConsumingReishi = () => {
   const headerText = "consuming reishi"
   return (
@@ -60,7 +68,7 @@ const ConsumingReishi = () => {
         <StaticImage
           src="../images/reishi-homepage.png"
           alt="grown reishi in bag sprouted outwards on warm-colored background"
-          style={{margin:'2rem auto'}}
+          style={{ margin: "2rem auto" }}
         />
         <p>
           Officia culpa eos illum maiores maxime ullam eaque sint iure
@@ -83,36 +91,30 @@ const ConsumingReishi = () => {
         </StyledIntroTableParagraph>
       </StyledContainer>
       <Container>
-        <TestTable />
-
+        <MushroomTable />
       </Container>
 
-      <figure className="consuming-reishi-container__table">
-        <img
-          src="../Content/mushroom_studies_health_related_cropped.png"
-          alt=""
-        />
-        <figcaption>
-          <small>
-            Table with PubMed results – results found on 7 April 2021. Mushroom
-            species was combined with the health related term in the regular
-            search function.
-          </small>
-        </figcaption>
-      </figure>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
-        accusamus vero voluptatum mollitia quas obcaecati. Impedit soluta,
-        quibusdam totam suscipit iure, sequi fugiat veniam qui ipsam rem,
-        tenetur eum quo quaerat. Maxime accusantium eum corporis? Magnam labore
-        sit sapiente vitae molestiae, neque quas aut reprehenderit perspiciatis
-        vero natus commodi ad. Ratione perferendis totam repellat eum
-        reprehenderit iusto a? Quis officiis praesentium possimus cupiditate
-        libero omnis, eius ratione expedita numquam soluta, nemo perferendis
-        doloremque eos, recusandae voluptatem quos officia! Nostrum accusamus
-        rem deserunt voluptates nihil ipsum! Dicta maiores a tempora doloribus
-        nisi et aliquam quibusdam animi. Quis id magni tempora perferendis?
-      </p>
+      <StyledContainer>
+        <StyledTableSub>
+          Table with PubMed results – results found on 7 April 2021. Mushroom
+          species was combined with the health related term in the regular
+          search function.
+        </StyledTableSub>
+        <StyledBottomP>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+          accusamus vero voluptatum mollitia quas obcaecati. Impedit soluta,
+          quibusdam totam suscipit iure, sequi fugiat veniam qui ipsam rem,
+          tenetur eum quo quaerat. Maxime accusantium eum corporis? Magnam
+          labore sit sapiente vitae molestiae, neque quas aut reprehenderit
+          perspiciatis vero natus commodi ad. Ratione perferendis totam repellat
+          eum reprehenderit iusto a? Quis officiis praesentium possimus
+          cupiditate libero omnis, eius ratione expedita numquam soluta, nemo
+          perferendis doloremque eos, recusandae voluptatem quos officia!
+          Nostrum accusamus rem deserunt voluptates nihil ipsum! Dicta maiores a
+          tempora doloribus nisi et aliquam quibusdam animi. Quis id magni
+          tempora perferendis?
+        </StyledBottomP>
+      </StyledContainer>
     </Layout>
   )
 }
