@@ -11,7 +11,7 @@ const Accordion = muiStyled(props => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
-  margin: ".7rem",
+  margin: ".4rem",
   borderLeft: "4px solid #F3BC77",
   "&:before": {
     display: "none",
@@ -48,7 +48,7 @@ export default function CustomAccordion() {
     setExpanded(newExpanded ? panel : false)
   }
   return (
-    <div>
+    <>
       {faqData.map((row, index) => (
         <Accordion
           key={index}
@@ -62,12 +62,12 @@ export default function CustomAccordion() {
             <Typography>{row.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ paddingLeft: "2rem", fontWeight: "bold" }}>
+            <Typography sx={{ paddingLeft: "2rem" }}>
               {row.answer}
             </Typography>
           </AccordionDetails>
         </Accordion>
       ))}
-    </div>
+    </>
   )
 }

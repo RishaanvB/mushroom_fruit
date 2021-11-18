@@ -3,9 +3,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs"
 
-import Button from "@mui/material/Button"
-
-const Container = styled.section`
+const StyledContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -59,35 +57,50 @@ const StyledRightArrow = styled(BsArrowRightCircle)`
 `
 const InfoSection = ({ number, handleBack, handleNext }) => {
   const imageData = [
-    <StaticImage width={680} aspectRatio={1} src="placeholder-1.png" alt="" />,
+    <StaticImage
+      width={680}
+      aspectRatio={1}
+      src="../../images/placeholder-1.png"
+      alt=""
+    />,
     <StaticImage
       width={680}
       aspectRatio={1}
       fit="cover"
-      src="placeholder-2.png"
+      src="../../images/placeholder-2.png"
       alt="placeholder"
     />,
-    <StaticImage width={680} aspectRatio={1} src="placeholder-3.png" alt="" />,
+    <StaticImage
+      width={680}
+      aspectRatio={1}
+      src="../../images/placeholder-3.png"
+      alt=""
+    />,
   ]
-  const headerData = ["Phase One", "Phase Two", "Phase Three"]
-  const pData = ["Phase One text", "Phase Two TEXT", "Phase Three TEXT"]
+  const headers = ["Phase One", "Phase Two", "Phase Three"]
+  const paragraphs = ["Phase One text", "Phase Two TEXT", "Phase Three TEXT"]
   return (
-    <Container>
+    <StyledContainer>
       {imageData[number]}
       <StyledLeftArrow onClick={handleBack}>Back</StyledLeftArrow>
       <StyledInfoSection>
         <HeaderContainer>
-          <StyledHeader>{headerData[number]}</StyledHeader>
+          <StyledHeader>{headers[number]}</StyledHeader>
           <Line></Line>
         </HeaderContainer>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-          itaque vero unde rem nostrum libero, porro a? Cum, laudantium sequi.
+          L Ever since I graduated at Wageningen University in 2014, I have been
+          passionately growing all sorts of culinary and medicinal mushrooms.
+          Soon I came across the Reishi mushroom and ever since that first
+          encounter, I have focused my efforts on how to best grow and consume
+          this mushroom species. For the past five years, this mushroom species
+          has introduced me into the world of mushrooms and has strengthened my
+          interest in the field of mycology.
         </p>
-        <p>{pData[number]}</p>
+        <p>{paragraphs[number]}</p>
       </StyledInfoSection>
       <StyledRightArrow onClick={handleNext}>Next</StyledRightArrow>
-    </Container>
+    </StyledContainer>
   )
 }
 

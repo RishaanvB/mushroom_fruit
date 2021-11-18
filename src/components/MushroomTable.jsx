@@ -152,7 +152,7 @@ export default function TestTable() {
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - dataArray.length) : 0
   return (
     <>
-      <TableContainer component={Paper} sx={{ padding: "1rem" }}>
+      <TableContainer component={Paper} sx={{ padding: "1rem", marginBottom: '4rem' }}>
         <Table
           sx={{ minWidth: 650 }}
           size="small"

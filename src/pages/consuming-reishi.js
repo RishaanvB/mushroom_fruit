@@ -31,7 +31,7 @@ const StyledTableSub = styled.small`
   margin: 1rem auto;
 `
 const StyledBottomP = styled.p`
-  margin: 2rem auto;
+  margin: 2rem 0 4rem 0;
 `
 const ConsumingReishi = () => {
   const headerText = "consuming reishi"

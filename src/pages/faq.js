@@ -9,6 +9,7 @@ import CustomAccordion from "../components/CustomAccordion"
 const CustomStyledGridContainer = styled.div`
   display: grid;
   place-items: center;
+  margin-bottom: 4rem;
 `
 const StyledSubheader = styled.p`
   font-weight: bold;
