@@ -62,7 +62,9 @@ export default function CustomAccordion() {
             <Typography>{row.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{paddingLeft:'2rem'}}>{row.answer}</Typography>
+            <Typography sx={{ paddingLeft: "2rem", fontWeight: "bold" }}>
+              {row.answer}
+            </Typography>
           </AccordionDetails>
         </Accordion>
       ))}

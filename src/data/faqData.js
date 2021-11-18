@@ -14,7 +14,7 @@ const data = [
   {
     question: "What is in the filter bag ?",
     answer:
-      "Inside the filter bag, mushroom substrate can be found which contain oak sawdust, natural gypsum, wheat grains and water The white material is mycelium from the Reishi mushroom, which is “colonizing” or “engulfing” the oak sawdust.",
+      "Inside the filter bag, mushroom substrate can be found which contain oak sawdust, natural gypsum, wheat grains and water. The white material is mycelium from the Reishi mushroom, which is “colonizing” or “engulfing” the oak sawdust.",
   },
   {
     question:
