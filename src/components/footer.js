@@ -18,6 +18,12 @@ const StyledContainer = styled(Container)`
   padding-bottom: 2.5rem;
   column-gap: 3rem;
 `
+
+const CopyrightContainer = styled(Container)`
+  padding: .5rem 0;
+  border-top: 1px solid #f3bb7716;
+  color: #ffffff8d;
+`
 const Footer = () => {
   return (
     <StyledBackgroundFill>
@@ -26,6 +32,9 @@ const Footer = () => {
         <FooterSitemapLinks />
         <FooterSocialsContainer />
       </StyledContainer>
+      <CopyrightContainer as="footer">
+        <small>&copy; 2021 MushroomFruit. All rights reserved. </small>
+      </CopyrightContainer>
     </StyledBackgroundFill>
   )
 }
