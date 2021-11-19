@@ -114,7 +114,7 @@ const About = () => {
             </div>
             <StyledContactSmall>
               If you have any more questions, business inquiries, or just simply
-              would like to more about me and my future endeavors, please don’t
+              would like to know more about me and my future endeavors, please don’t
               hesitate to contact me at the following address:
             </StyledContactSmall>
             <StyledAvatarContainer>
