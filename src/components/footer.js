@@ -10,13 +10,16 @@ const StyledBackgroundFill = styled.section`
   width: 100%;
 `
 const StyledContainer = styled(Container)`
-  height: 360px;
+  /* height: 360px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   column-gap: 3rem;
+  @media screen and (max-width:1024px){
+    flex-direction:column;
+  }
 `
 
 const CopyrightContainer = styled(Container)`

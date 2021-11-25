@@ -8,6 +8,9 @@ const StyledHowItWorksContainer = styled.div`
   justify-content: space-between;
   align-items: stretch;
   column-gap: 4rem;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `
 const HowItWorksContainer = () => {
   return (
@@ -15,6 +18,8 @@ const HowItWorksContainer = () => {
       <StaticImage
         src="../images/reishi-homepage.png"
         alt="grown reishi in bag sprouted outwards on warm-colored background"
+        aspectRatio={1 / 1}
+        transformOptions={{fit:'cover'}}
       />
       <BulletpointsContainer />
     </StyledHowItWorksContainer>

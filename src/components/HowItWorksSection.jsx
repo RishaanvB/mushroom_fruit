@@ -6,7 +6,8 @@ import background from "../images/background-image-how-it-works.webp"
 
   const StyledBGSection = styled.section`
     width: 100%;
-    height: 100vh;
+    padding-top:4rem;
+    padding-bottom:4rem;
     background-size: cover;
     background-image: url(${background});
     background-position: center right;
@@ -15,6 +16,7 @@ import background from "../images/background-image-how-it-works.webp"
     align-items: center;
     background-attachment: fixed;
   `
+
 const HowItWorksSection = () => {
 
 

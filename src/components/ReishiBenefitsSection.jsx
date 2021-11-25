@@ -8,7 +8,9 @@ import { FaHeartbeat } from "react-icons/fa"
 
 const StyledBGSection = styled.section`
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  padding-top:4rem;
+  padding-bottom:4rem;
   background-size: cover;
   background-image: url(${background});
   background-position: center right;
@@ -43,7 +45,7 @@ const StyledInfoText = styled.p`
 
 const StyledContainer = styled(Container)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-column-gap: 4rem;
 `
 const StyledButton = styled(Button)`

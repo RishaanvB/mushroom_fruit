@@ -2,43 +2,68 @@ import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { RiMenu3Line } from "react-icons/ri"
 
-  const StyledNavigationBar = styled.nav`
-    display: flex;
-    justify-content: space-between;
+const StyledNavContainer = styled.nav`
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  column-gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+`
+const StyledNavigationBar = styled.nav`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1rem;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    column-gap:1rem;
-  `
-  const StyledLink = styled(GatsbyLink)`
-    position: relative;
-    text-decoration: none;
-    color: #dad9d8;
+    display: none;
+    height: 100vh;
+  }
+`
+const StyledLink = styled(GatsbyLink)`
+  position: relative;
+  text-decoration: none;
+  color: #dad9d8;
 
-    &.active::before {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      width: 70%;
-      height: 5px;
-      background: #f3bc77;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      width: 0%;
-      height: 5px;
-      background: #f3bc77;
-      transition: width 0.3s;
-    }
+  &.active::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 70%;
+    height: 5px;
+    background: #f3bc77;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 5px;
+    background: #f3bc77;
+    transition: width 0.3s;
+  }
 
-    &:hover::before {
-      width: 70%;
-    }
-  `
+  &:hover::before {
+    width: 70%;
+  }
+`
+const StyledMenu = styled(RiMenu3Line)`
+  margin-left: auto;
+  align-self: center;
+  font-size: 2rem;
+  @media screen and (min-width: 770px) {
+    display: none;
+  }
+`
 const NavBar = () => {
   return (
-    <>
+    <StyledNavContainer>
       <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
       <StyledNavigationBar>
         <StyledLink activeClassName="active" to="/">
@@ -60,7 +85,8 @@ const NavBar = () => {
           About me
         </StyledLink>
       </StyledNavigationBar>
-    </>
+      <StyledMenu className={"hamburgerIcon"} color="white" />
+    </StyledNavContainer>
   )
 }
 
