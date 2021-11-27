@@ -9,15 +9,14 @@ const StyledLinkContainer = styled.div`
   display: flex;
   column-gap: 0.7rem;
   @media screen and (max-width: 1024px) {
-    align-self: flex-start;
+    align-self: center;
   }
 `
-
 
 const FooterSocialsContainer = () => {
   return (
     <StyledLinkContainer>
-      <a 
+      <a
         style={{ display: "block" }}
         href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
         target="_blank"
