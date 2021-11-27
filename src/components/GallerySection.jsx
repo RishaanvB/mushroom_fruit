@@ -4,7 +4,7 @@ import styled from "styled-components"
 import background from "../images/bg-gallery-photo.webp"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 import ImageListIndexPage from "./ImageListIndexPage"
-
+import {Link} from 'gatsby'
 const StyledBGSection = styled.section`
   position: relative;
   width: 100%;
@@ -19,7 +19,6 @@ const StyledBGSection = styled.section`
 `
 const StyledHeader = styled(UnderlineHeader)`
   margin: auto;
-  /* margin-top:4rem; */
 `
 const StyledContainer = styled(Container)`
   display: flex;
@@ -34,20 +33,11 @@ const GallerySection = () => {
   return (
     <>
       <StyledBGSection>
-        {/* <StaticImage
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            zIndex: "0",
-          }}
-          src={bg}
-          alt="photo camera background"
-        /> */}
+        
         <StyledContainer>
           <StyledHeader>Gallery</StyledHeader>
           <ImageListIndexPage />
-          <Button>view gallery</Button>
+          <Button><Link to={'/gallery'}>View gallery</Link>  </Button>
         </StyledContainer>
       </StyledBGSection>
     </>

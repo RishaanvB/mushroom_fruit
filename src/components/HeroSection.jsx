@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import background from "../images/hero-bg-placeholder.webp"
 import { Container, Button } from "../styles/CustomStyles"
+import { Link } from "gatsby"
 
 const StyledBGSection = styled.section`
   width: 100%;
@@ -31,6 +32,7 @@ const StyledSubHeader = styled.p`
   margin-bottom: 5rem;
   font-size: 1.2rem;
 `
+
 const HeroSection = () => {
   return (
     <StyledBGSection>
@@ -40,7 +42,16 @@ const HeroSection = () => {
           Now is your chance! With the Reishi Growkit from Mushroomfruit,
           growing indoors has never been easier !
         </StyledSubHeader>
-        <Button>Order here!</Button>
+        <Button>
+          {" "}
+          <a
+            href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Order here!
+          </a>{" "}
+        </Button>
       </Container>
     </StyledBGSection>
   )

@@ -50,14 +50,6 @@ const StyledLink = styled(GatsbyLink)`
     color: #181818;
   }
   @media screen and (min-width: 770px) {
-    &.active::before {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      width: 70%;
-      height: 5px;
-      background: #f3bc77;
-    }
     &::before {
       content: "";
       position: absolute;
@@ -85,8 +77,8 @@ const StyledMenu = styled(RiMenu3Line)`
 const CloseMenuIcon = styled(MdOutlineClose)`
   display: block;
   margin-left: auto;
-  margin-right:1rem;
-  margin-top:1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
 `
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)

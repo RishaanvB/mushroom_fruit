@@ -25,7 +25,16 @@ const FooterStyledCTABlock = () => {
     <StyledSection>
       <StyledUnderLineHeader>grow your own reishi!</StyledUnderLineHeader>
       <Subheader>Visit my partner's shop and order your own reishi..</Subheader>
-      <Button>Order here</Button>
+      <Button>
+        {" "}
+        <a
+          href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Order here!
+        </a>{" "}
+      </Button>
     </StyledSection>
   )
 }

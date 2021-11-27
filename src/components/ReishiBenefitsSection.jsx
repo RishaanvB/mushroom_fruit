@@ -5,6 +5,7 @@ import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 import background from "../images/bg-reishi-benefits-mainpage.webp"
 import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
+import {Link} from 'gatsby'
 
 const StyledBGSection = styled.section`
   width: 100%;
@@ -84,7 +85,7 @@ const ReishiBenefitsSection = () => {
         </StyledContainer>
       </StyledSection>
       <Container>
-        <StyledButton>Learn More</StyledButton>
+        <StyledButton> <Link to={'/consuming-reishi'}>Learn More</Link> </StyledButton>
       </Container>
     </StyledBGSection>
   )

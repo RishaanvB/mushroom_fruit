@@ -19,6 +19,9 @@ const StyledContainer = styled(Container)`
   column-gap: 3rem;
   @media screen and (max-width:1024px){
     flex-direction:column;
+    row-gap:2rem;
+    justify-content:space-between;
+    align-items:flex-start;
   }
 `
 
@@ -36,7 +39,7 @@ const Footer = () => {
         <FooterSocialsContainer />
       </StyledContainer>
       <CopyrightContainer as="footer">
-        <small>&copy; 2021 MushroomFruit. All rights reserved. </small>
+        <small style={{paddingLeft: '1rem'}}>&copy; 2021 MushroomFruit. All rights reserved. </small>
       </CopyrightContainer>
     </StyledBackgroundFill>
   )
