@@ -17,16 +17,16 @@ const StyledContainer = styled(Container)`
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   column-gap: 3rem;
-  @media screen and (max-width:1024px){
-    flex-direction:column;
-    row-gap:2rem;
-    justify-content:space-between;
-    align-items:flex-start;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
   }
 `
 
 const CopyrightContainer = styled(Container)`
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   border-top: 1px solid #f3bb7716;
   color: #ffffff8d;
 `
@@ -39,7 +39,9 @@ const Footer = () => {
         <FooterSocialsContainer />
       </StyledContainer>
       <CopyrightContainer as="footer">
-        <small style={{paddingLeft: '1rem'}}>&copy; 2021 MushroomFruit. All rights reserved. </small>
+        <small style={{ paddingLeft: "1rem" }}>
+          &copy; 2021 MushroomFruit. All rights reserved.{" "}
+        </small>
       </CopyrightContainer>
     </StyledBackgroundFill>
   )

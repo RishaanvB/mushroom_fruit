@@ -21,6 +21,13 @@ const steps = ["Plant a seed", "Watch it grow", "Enjoy"]
 const StyledBox = styled(Box)`
   width: 100%;
   margin: 2.5rem auto;
+  @media screen and (max-width: 1024px) {
+    order: 1;
+  }
+`
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const StyledStepLabel = styled(StepLabel)`
@@ -104,7 +111,7 @@ export default function HorizontalNonLinearStepper() {
   }
 
   return (
-    <>
+    <StyledContainer>
       <StyledBox>
         <Stepper
           nonLinear
@@ -130,6 +137,6 @@ export default function HorizontalNonLinearStepper() {
         handleNext={handleNext}
         handleBack={handleBack}
       />
-    </>
+    </StyledContainer>
   )
 }

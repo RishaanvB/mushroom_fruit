@@ -70,6 +70,7 @@ const StyledMenu = styled(RiMenu3Line)`
   margin-left: auto;
   align-self: center;
   font-size: 2rem;
+  cursor: pointer;
   @media screen and (min-width: 770px) {
     display: none;
   }
@@ -79,6 +80,7 @@ const CloseMenuIcon = styled(MdOutlineClose)`
   margin-left: auto;
   margin-right: 1rem;
   margin-top: 1rem;
+  cursor: pointer;
 `
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
