@@ -16,10 +16,10 @@ const StyledHeader = styled(UnderlineHeader)`
 `
 const StyledFirstP = styled.p`
   font-weight: 500;
+  margin: 1rem auto;
   &::first-letter {
     font-size: 1.4rem;
     font-weight: 500;
-    margin: 1rem auto;
   }
 `
 const StyledIntroTableParagraph = styled.p`
@@ -49,7 +49,7 @@ const ConsumingReishi = () => {
           the compounds of interest out of the Reishi mushroom.
         </StyledFirstP>
 
-        <p>
+        <p style={{ margin: "1rem 0" }}>
           The most commonly used method is by boiling pieces of the Reishi
           mushroom in water. To get most of the compounds out of the mushroom,
           this process of boiling is done for a lengthy amount of time:
@@ -70,18 +70,15 @@ const ConsumingReishi = () => {
           alt="grown reishi in bag sprouted outwards on warm-colored background"
           style={{ margin: "2rem auto" }}
         />
-        <p>
+        <p style={{ margin: "1rem 0" }}>
           Officia culpa eos illum maiores maxime ullam eaque sint iure
           consequatur odio corporis ad. Deleniti iure ad eos necessitatibus
-          provident optio voluptates, numquam veniam, nostrum quis molestias
-          aspernatur odit non error fugit impedit facilis iusto deserunt nisi
-          exercitationem suscipit, incidunt at vel ad repudiandae! Dolore, amet
-          cum! Sit ducimus asperiores veritatis recusandae, animi perferendis
-          aliquam nemo vel voluptate perspiciatis optio repudiandae doloremque,
-          id soluta accusantium expedita fuga incidunt, quaerat nisi assumenda
-          deserunt? Enim cum ipsum voluptatum eius? Possimus, perspiciatis
-          quaerat. Aspernatur exercitationem aliquam laudantium debitis
-          veritatis hic dolor accusamus!
+          itationem aliquam laudantium debitis veritatis hic dolor accusamus!
+        </p>
+        <p style={{ margin: "1rem 0" }}>
+          Officia culpa eos illum maiores maxime ullam eaque sint iure
+          consequatur odio corporis ad. Deleniti iure ad eos necessitatibus
+          itationem aliquam laudantium debitis veritatis hic dolor accusamus!
         </p>
 
         <StyledIntroTableParagraph>
