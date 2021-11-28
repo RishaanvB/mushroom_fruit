@@ -53,9 +53,9 @@ const StyledLink = styled(GatsbyLink)`
     &::before {
       content: "";
       position: absolute;
-      bottom: -5px;
+      bottom: 1px;
       width: 0%;
-      height: 5px;
+      height: 2px;
       background: #f3bc77;
       transition: width 0.3s;
     }

@@ -5,13 +5,13 @@ import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 import background from "../images/bg-reishi-benefits-mainpage.webp"
 import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
-import {Link} from 'gatsby'
+import { Link } from "gatsby"
 
 const StyledBGSection = styled.section`
   width: 100%;
   /* height: 100vh; */
-  padding-top:4rem;
-  padding-bottom:4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-size: cover;
   background-image: url(${background});
   background-position: center right;
@@ -46,8 +46,14 @@ const StyledInfoText = styled.p`
 
 const StyledContainer = styled(Container)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+
   grid-column-gap: 4rem;
+  @media screen and (max-width: 520px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
 `
 const StyledButton = styled(Button)`
   align-self: flex-start;
@@ -85,7 +91,10 @@ const ReishiBenefitsSection = () => {
         </StyledContainer>
       </StyledSection>
       <Container>
-        <StyledButton> <Link to={'/consuming-reishi'}>Learn More</Link> </StyledButton>
+        <StyledButton>
+          {" "}
+          <Link to={"/consuming-reishi"}>Learn More</Link>{" "}
+        </StyledButton>
       </Container>
     </StyledBGSection>
   )

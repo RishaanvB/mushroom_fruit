@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-
 const Container = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
@@ -29,19 +28,21 @@ const Button = styled.button`
   }
 `
 const UnderlineHeader = styled.h1`
+  text-align: center;
   margin-bottom: 4rem;
   position: relative;
   color: white;
-  width: max-content;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: #f3bc77;
-    height: 5px;
-    width: 70%;
-    bottom: -10px;
-    left: 0;
+  width: fit-content;
+  @media screen and (min-width: 680px) {
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #f3bc77;
+      height: 5px;
+      width: 70%;
+      bottom: -10px;
+      left: 0;
+    }
   }
 `
 
