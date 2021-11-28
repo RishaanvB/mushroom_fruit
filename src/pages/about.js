@@ -28,6 +28,10 @@ const StyledContainer = styled.section`
   align-items: stretch;
   margin-bottom: 4rem;
   margin-top: 4rem;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -45,6 +49,9 @@ const Divider = styled.span`
 
 const StyledAboutSection = styled.section`
   width: 40%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `
 
 const TextInfoIntro = styled.p`
@@ -114,8 +121,8 @@ const About = () => {
             </div>
             <StyledContactSmall>
               If you have any more questions, business inquiries, or just simply
-              would like to know more about me and my future endeavors, please don’t
-              hesitate to contact me at the following address:
+              would like to know more about me and my future endeavors, please
+              don’t hesitate to contact me at the following address:
             </StyledContactSmall>
             <StyledAvatarContainer>
               <Avatar sx={{ bgcolor: "#F3BC77 " }}>
