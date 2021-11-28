@@ -27,6 +27,10 @@ const StyledInfoSection = styled.section`
   @media screen and (max-width: 1024px) {
     max-width: 663px;
   }
+  @media screen and (max-width: 568px) {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 80px;
+  }
 `
 const HeaderContainer = styled.div`
   display: flex;
@@ -63,6 +67,10 @@ const StyledLeftArrow = styled(BsArrowLeftCircle)`
     color: #96744c;
     transform: scale(1.1);
   }
+  @media screen and (max-width: 568px) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
 `
 const StyledRightArrow = styled(BsArrowRightCircle)`
   font-size: clamp(2rem, 2.5rem, 3rem);
@@ -74,7 +82,19 @@ const StyledRightArrow = styled(BsArrowRightCircle)`
     color: #96744c;
     transform: scale(1.1);
   }
+  @media screen and (max-width: 568px) {
+    grid-row: 2 / 3;
+    grid-column: -1 / -2;
+    justify-self: end;
+  }
 `
+const StyledTextContainer = styled.div`
+  @media screen and (max-width: 568px) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+`
+
 const InfoSection = ({ number, handleBack, handleNext }) => {
   const imageData = [
     <StaticImage
@@ -105,7 +125,7 @@ const InfoSection = ({ number, handleBack, handleNext }) => {
         {imageData[number]}
         <StyledInfoSection>
           <StyledLeftArrow onClick={handleBack}>Back</StyledLeftArrow>
-          <div>
+          <StyledTextContainer>
             <HeaderContainer>
               <StyledHeader>{headers[number]}</StyledHeader>
               <Line></Line>
@@ -121,7 +141,7 @@ const InfoSection = ({ number, handleBack, handleNext }) => {
               mycology.
             </p>
             <p>{paragraphs[number]}</p>
-          </div>
+          </StyledTextContainer>
           <StyledRightArrow onClick={handleNext}>Next</StyledRightArrow>
         </StyledInfoSection>
       </StyledContainer>
