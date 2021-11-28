@@ -10,18 +10,15 @@ const StyledBackgroundFill = styled.section`
   width: 100%;
 `
 const StyledContainer = styled(Container)`
-  /* height: 360px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   column-gap: 3rem;
   @media screen and (max-width: 1024px) {
-    flex-direction: column;
-    row-gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
   }
 `
 

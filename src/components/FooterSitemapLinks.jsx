@@ -4,14 +4,12 @@ import { GoChevronRight } from "react-icons/go"
 import { Link } from "gatsby"
 
 const StyledLinksContainer = styled.ul`
-  width: clamp(100px, 300px, 100%);
   height: 100%;
   margin: 0;
   text-decoration: none;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-items: start;
   justify-content: space-between;
   align-items: flex-start;
   row-gap: 0.5rem;
