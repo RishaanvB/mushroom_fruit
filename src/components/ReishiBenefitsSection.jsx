@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import styled from "styled-components"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 
@@ -6,6 +6,8 @@ import background from "../images/bg-reishi-benefits-mainpage.webp"
 import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
 import { Link } from "gatsby"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const StyledBGSection = styled.section`
   width: 100%;
@@ -60,6 +62,11 @@ const StyledButton = styled(Button)`
   margin-top: 3rem;
 `
 const ReishiBenefitsSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 750,
+    })
+  }, [])
   return (
     <StyledBGSection>
       <Container>
@@ -67,7 +74,7 @@ const ReishiBenefitsSection = () => {
       </Container>
       <StyledSection>
         <StyledContainer>
-          <StyledBenefitContainer>
+          <StyledBenefitContainer data-aos="fade-right">
             <StyledSmallHeader>
               Consuming <GiSlicedMushroom size="3rem" color="white" />
             </StyledSmallHeader>
@@ -77,7 +84,7 @@ const ReishiBenefitsSection = () => {
               complete guide on growing and maintaining your reishi here.
             </StyledInfoText>
           </StyledBenefitContainer>
-          <StyledBenefitContainer>
+          <StyledBenefitContainer data-aos="fade-left">
             <StyledSmallHeader>
               Health <FaHeartbeat size="3rem" color="white" />
             </StyledSmallHeader>

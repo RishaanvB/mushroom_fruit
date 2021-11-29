@@ -1,10 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import background from "../images/bg-gallery-photo.webp"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 import ImageListIndexPage from "./ImageListIndexPage"
-import {Link} from 'gatsby'
-
+import { Link } from "gatsby"
 
 const StyledBGSection = styled.section`
   position: relative;
@@ -33,11 +32,12 @@ const GallerySection = () => {
   return (
     <>
       <StyledBGSection>
-        
         <StyledContainer>
           <StyledHeader>Gallery</StyledHeader>
           <ImageListIndexPage />
-          <Button><Link to={'/gallery'}>View gallery</Link>  </Button>
+          <Button>
+            <Link to={"/gallery"}>View gallery</Link>{" "}
+          </Button>
         </StyledContainer>
       </StyledBGSection>
     </>

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { animated } from "@react-spring/web"
 const Container = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 100%;
 `
 
-const Button = styled.button`
+const Button = styled(animated.button)`
   outline: none;
   border: none;
   color: black;

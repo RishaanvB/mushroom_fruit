@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 const ImageList = styled.div`
   width: 100%;
   margin-top: 6rem;
@@ -18,32 +19,47 @@ const ImageList = styled.div`
 const imageBoxShadow = { boxShadow: "rgb(0 0 0 / 30%) 4px 6px 10px 5px" }
 
 export default function ImageListIndexPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 750,
+    })
+  }, [])
   return (
     <ImageList>
-      <StaticImage
-        style={imageBoxShadow}
-        src="../images/gallery-placeholder-1.png"
-        alt="title"
-        aspectRatio={1 / 1}
-      />
-      <StaticImage
-        style={imageBoxShadow}
-        src="../images/gallery-placeholder-2.png"
-        alt="title"
-        aspectRatio={1 / 1}
-      />
-      <StaticImage
-        style={imageBoxShadow}
-        src="../images/gallery-placeholder-3.png"
-        alt="title"
-        aspectRatio={1 / 1}
-      />
-      <StaticImage
-        style={imageBoxShadow}
-        src="../images/bg-gallery.jpg"
-        alt="title"
-        aspectRatio={1 / 1}
-      />
+      <figure data-aos="zoom-in-up">
+        <StaticImage
+          style={imageBoxShadow}
+          src="../images/gallery-placeholder-1.png"
+          alt="title"
+          aspectRatio={1 / 1}
+        />
+      </figure>
+      <figure data-aos="zoom-in-up" data-aos-delay="200">
+        <StaticImage
+          style={imageBoxShadow}
+          src="../images/gallery-placeholder-2.png"
+          alt="title"
+          aspectRatio={1 / 1}
+        />
+      </figure>
+      <figure data-aos="zoom-in-up" data-aos-delay="400">
+        <StaticImage
+          style={imageBoxShadow}
+          src="../images/gallery-placeholder-3.png"
+          alt="title"
+          aspectRatio={1 / 1}
+        />
+      </figure>
+      <figure data-aos="zoom-in-up" data-aos-delay="600">
+        <StaticImage
+          style={imageBoxShadow}
+          src="../images/gallery-placeholder-1.png"
+          alt="title"
+          aspectRatio={1 / 1}
+        />
+      </figure>
+        
+ 
     </ImageList>
   )
 }

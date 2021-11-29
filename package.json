@@ -12,6 +12,7 @@
     "@mui/material": "^5.1.0",
     "@mui/styled-engine-sc": "^5.1.0",
     "@react-icons/all-files": "^4.1.0",
+    "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^4.1.1",
     "gatsby-plugin-gatsby-cloud": "^4.1.0",
@@ -31,6 +32,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-spring": "^9.3.2",
+    "react-visibility-sensor": "^5.1.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

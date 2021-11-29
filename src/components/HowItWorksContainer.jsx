@@ -1,10 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import BulletpointsContainer from "./BulletpointsContainer"
 import { Button } from "../styles/CustomStyles"
 import { Link } from "gatsby"
-
 const StyledHowItWorksContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,10 +15,12 @@ const StyledHowItWorksContainer = styled.div`
   }
 `
 const HowItWorksContainer = () => {
+
   return (
     <>
       <StyledHowItWorksContainer>
         <StaticImage
+          data-aos="fade-up"
           src="../images/reishi-homepage.png"
           alt="grown reishi in bag sprouted outwards on warm-colored background"
           aspectRatio={1 / 1}
@@ -27,7 +28,7 @@ const HowItWorksContainer = () => {
         />
         <BulletpointsContainer />
       </StyledHowItWorksContainer>
-      <Button data-sal="slide-up" data-sal-duration="1000">
+      <Button>
         <Link to="/how-it-grows">Show more</Link>{" "}
       </Button>
     </>
