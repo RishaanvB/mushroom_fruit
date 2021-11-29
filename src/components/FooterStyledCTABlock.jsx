@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, UnderlineHeader, Button } from "../styles/CustomStyles"
+import { UnderlineHeader, Button } from "../styles/CustomStyles"
 import styled from "styled-components"
 
 const StyledSection = styled.div`

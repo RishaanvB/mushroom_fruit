@@ -1,5 +1,5 @@
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
-import React, { useState } from "react"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 import styled from "styled-components"
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs"
 import { Container } from "../../styles/CustomStyles"

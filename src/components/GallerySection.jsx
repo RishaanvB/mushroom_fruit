@@ -1,10 +1,11 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import styled from "styled-components"
 import background from "../images/bg-gallery-photo.webp"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 import ImageListIndexPage from "./ImageListIndexPage"
 import {Link} from 'gatsby'
+
+
 const StyledBGSection = styled.section`
   position: relative;
   width: 100%;
@@ -29,7 +30,6 @@ const StyledContainer = styled(Container)`
   margin-bottom: 6rem;
 `
 const GallerySection = () => {
-  const bg = "../images/bg-gallery-photo.jpg"
   return (
     <>
       <StyledBGSection>

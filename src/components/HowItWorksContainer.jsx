@@ -10,7 +10,7 @@ const StyledHowItWorksContainer = styled.div`
   justify-content: space-between;
   align-items: stretch;
   column-gap: 4rem;
-  margin:4rem 0;
+  margin: 4rem 0;
   @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
@@ -27,7 +27,7 @@ const HowItWorksContainer = () => {
         />
         <BulletpointsContainer />
       </StyledHowItWorksContainer>
-      <Button>
+      <Button data-sal="slide-up" data-sal-duration="1000">
         <Link to="/how-it-grows">Show more</Link>{" "}
       </Button>
     </>
