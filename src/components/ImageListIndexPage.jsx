@@ -34,7 +34,7 @@ export default function ImageListIndexPage() {
           aspectRatio={1 / 1}
         />
       </figure>
-      <figure data-aos="zoom-in-up" data-aos-delay="200">
+      <figure data-aos="zoom-in-up" data-aos-delay="150">
         <StaticImage
           style={imageBoxShadow}
           src="../images/gallery-placeholder-2.png"
@@ -42,7 +42,7 @@ export default function ImageListIndexPage() {
           aspectRatio={1 / 1}
         />
       </figure>
-      <figure data-aos="zoom-in-up" data-aos-delay="400">
+      <figure data-aos="zoom-in-up" data-aos-delay="300">
         <StaticImage
           style={imageBoxShadow}
           src="../images/gallery-placeholder-3.png"
@@ -50,7 +50,7 @@ export default function ImageListIndexPage() {
           aspectRatio={1 / 1}
         />
       </figure>
-      <figure data-aos="zoom-in-up" data-aos-delay="600">
+      <figure data-aos="zoom-in-up" data-aos-delay="450">
         <StaticImage
           style={imageBoxShadow}
           src="../images/gallery-placeholder-1.png"
@@ -58,8 +58,6 @@ export default function ImageListIndexPage() {
           aspectRatio={1 / 1}
         />
       </figure>
-        
- 
     </ImageList>
   )
 }

@@ -125,7 +125,9 @@ const NavBar = () => {
   )
   return (
     <StyledNavContainer>
-      <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
+      <GatsbyLink to="/">
+        <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
+      </GatsbyLink>
       <StyledNavigationBar>
         <StyledLink activeClassName="active" to="/">
           Home
