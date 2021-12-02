@@ -4,22 +4,22 @@ import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import HowItWorksContainer from "./HowItWorksContainer"
 import background from "../images/background-image-how-it-works.webp"
 
-  const StyledBGSection = styled.section`
-    width: 100%;
-    padding-top:4rem;
-    padding-bottom:4rem;
-    background-size: cover;
-    background-image: url(${background});
-    background-position: center right;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+const StyledBGSection = styled.section`
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-size: cover;
+  background-image: url(${background});
+  background-position: center right;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
     background-attachment: fixed;
-  `
+  }
+`
 
 const HowItWorksSection = () => {
-
-
   return (
     <StyledBGSection>
       <Container>

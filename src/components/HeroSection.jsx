@@ -14,7 +14,9 @@ const StyledBGSection = styled.section`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-attachment: fixed;
+  @media screen and (min-width: 1024px) {
+    background-attachment: fixed;
+  }
 `
 
 const StyledHeader = styled(animated.h1)`
@@ -44,7 +46,6 @@ const HeroSection = () => {
     to: { transform: "translateY(0px)", opacity: 1 },
   })
 
-
   return (
     <StyledBGSection>
       <Container>
@@ -58,7 +59,7 @@ const HeroSection = () => {
             growing indoors has never been easier !
           </StyledSubHeader>
         </section>
-        <Button >
+        <Button>
           {" "}
           <a
             href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"

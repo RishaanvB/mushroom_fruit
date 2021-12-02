@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 
@@ -20,7 +20,10 @@ const StyledBGSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-attachment: fixed;
+
+  @media screen and (min-width: 1024px) {
+    background-attachment: fixed;
+  }
 `
 const StyledSection = styled.section`
   background-color: #322921d9;
