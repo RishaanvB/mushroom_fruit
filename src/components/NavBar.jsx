@@ -12,11 +12,9 @@ const StyledNavContainer = styled.nav`
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  column-gap: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  column-gap: 8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 `
 const StyledNavigationBar = styled.nav`
   display: flex;
@@ -24,7 +22,7 @@ const StyledNavigationBar = styled.nav`
   align-items: center;
   column-gap: 1rem;
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `
@@ -43,22 +41,23 @@ const StyledLink = styled(GatsbyLink)`
   text-decoration: none;
   color: #dad9d8;
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
-
     color: #181818;
   }
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 1025px) {
     &::before {
       content: "";
       position: absolute;
-      bottom: 1px;
+      bottom: -1px;
       width: 0%;
       height: 2px;
       background: #f3bc77;
       transition: width 0.3s;
     }
-
+    &.active::before {
+      width: 70%;
+    }
     &:hover::before {
       width: 70%;
     }
@@ -70,7 +69,7 @@ const StyledMenu = styled(RiMenu3Line)`
   align-self: center;
   font-size: 2rem;
   cursor: pointer;
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `
@@ -104,24 +103,12 @@ const NavBar = () => {
     >
       <StyledNavigationBarMobile>
         <CloseMenuIcon size={"2rem"} onClick={toggleDrawer(false)} />
-        <StyledLink activeClassName="active" to="/">
-          Home
-        </StyledLink>
-        <StyledLink activeClassName="active" to="/how-it-grows">
-          How it grows
-        </StyledLink>
-        <StyledLink activeClassName="active" to="/consuming-reishi">
-          Consuming reishi
-        </StyledLink>
-        <StyledLink activeClassName="active" to="/faq">
-          FAQ
-        </StyledLink>
-        <StyledLink activeClassName="active" to="/gallery">
-          Gallery
-        </StyledLink>
-        <StyledLink activeClassName="active" to="/about">
-          About me
-        </StyledLink>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/how-it-grows">How it grows</StyledLink>
+        <StyledLink to="/consuming-reishi">Consuming reishi</StyledLink>
+        <StyledLink to="/faq">FAQ</StyledLink>
+        <StyledLink to="/gallery">Gallery</StyledLink>
+        <StyledLink to="/about">About me</StyledLink>
       </StyledNavigationBarMobile>
     </Box>
   )
