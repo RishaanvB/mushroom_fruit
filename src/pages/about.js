@@ -128,7 +128,15 @@ const About = () => {
               <Avatar sx={{ bgcolor: "#F3BC77 " }}>
                 <AlternateEmailIcon />
               </Avatar>
-              <address style={{ margin: "0" }}>info@mushroomfruit.com</address>
+              <address style={{ margin: "0" }}>
+                {" "}
+                <a
+                  style={{ textDecoration: "none", color: "black" }}
+                  href="mailto:placeholder@mushroomfruit.com?subject=I want to know more about reishi."
+                >
+                  info@mushroomfruit.com
+                </a>{" "}
+              </address>
             </StyledAvatarContainer>
           </StyledAboutSection>
         </StyledContainer>
