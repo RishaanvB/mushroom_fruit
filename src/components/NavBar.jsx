@@ -15,6 +15,8 @@ const StyledNavContainer = styled.nav`
   column-gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 `
 const StyledNavigationBar = styled.nav`
   display: flex;
@@ -81,6 +83,7 @@ const CloseMenuIcon = styled(MdOutlineClose)`
 `
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [logo, setLogo] = useState(0)
 
   const toggleDrawer = state => event => {
     if (
@@ -126,7 +129,21 @@ const NavBar = () => {
   return (
     <StyledNavContainer>
       <GatsbyLink to="/">
-        <StaticImage src="../images/logo.svg" alt="mushroom fruit logo" />
+        { logo === 0 &&  <StaticImage
+          src="../images/new_logo.svg"
+          width={200}
+          alt="mushroom fruit logo"
+        />}
+        { logo === 1 &&  <StaticImage
+          src="../images/logo.svg"
+          width={200}
+          alt="mushroom fruit logo"
+        />}
+        {/* <StaticImage
+          src="../images/new_logo.svg"
+          width={200}
+          alt="mushroom fruit logo"
+        /> */}
       </GatsbyLink>
       <StyledNavigationBar>
         <StyledLink activeClassName="active" to="/">
@@ -147,6 +164,8 @@ const NavBar = () => {
         <StyledLink activeClassName="active" to="/about">
           About me
         </StyledLink>
+        <button onClick={()=> logo === 0 ? setLogo(1) : setLogo(0)}>change logo</button>
+
       </StyledNavigationBar>
       <StyledMenu color={"white"} onClick={toggleDrawer(true)} />
       <Drawer open={isOpen} onClose={toggleDrawer(false)} anchor={"right"}>

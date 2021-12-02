@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
   top: ${props => (props.status ? "0rem" : "1rem")};
   width: 100%;
   background-color: ${props => (props.status ? "#1B1917" : "#101010a6")};
-  transition: all 0.3s ease-in;
+  transition: all 0.6s ease-out;
 `
 const StyledContainer = styled(Container)`
   display: flex;
