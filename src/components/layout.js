@@ -13,7 +13,6 @@ const Layout = ({ children, pageTitle }) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <meta name="author" content="R van Beveren" />
         <meta
           name="description"
           content="Mushroom related website providing reishi growkits and aims to provide information regarding reishi and other healthy mushroom related products."
