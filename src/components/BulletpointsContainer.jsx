@@ -66,7 +66,7 @@ const BulletpointsContainer = () => {
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiSpottedMushroom color="#e23719" size="2.5rem" />
+        <GiSpottedMushroom color="#c5c0aa" size="2.5rem" />
         <StyledHeader>Lorem ipsum dolor sit amet</StyledHeader>
         <StyledSubtext>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
@@ -74,7 +74,7 @@ const BulletpointsContainer = () => {
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiTrunkMushroom color="#2799db" size="2.5rem" />
+        <GiTrunkMushroom color="#dbd9bc" size="2.5rem" />
         <StyledHeader>Lorem ipsum dolor sit amet</StyledHeader>
         <StyledSubtext>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab

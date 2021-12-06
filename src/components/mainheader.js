@@ -26,6 +26,7 @@ const MainHeader = () => {
       window.removeEventListener("scroll", handleCollapseNav)
     }
   })
+
   const [status, collapse] = useState(false)
 
   const handleCollapseNav = () =>
