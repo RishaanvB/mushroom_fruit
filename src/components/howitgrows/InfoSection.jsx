@@ -1,8 +1,10 @@
 import { StaticImage } from "gatsby-plugin-image"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs"
 import { Container } from "../../styles/CustomStyles"
+import { useSpring, animated } from "react-spring"
+
 const StyledContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,7 +97,11 @@ const StyledTextContainer = styled.div`
   }
 `
 
-const InfoSection = ({ number, handleBack, handleNext }) => {
+const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
+  useEffect(() => {
+    setChange(!change)
+  }, [])
+  const [change, setChange] = useState(false)
   const imageData = [
     <StaticImage
       width={520}
@@ -118,29 +124,32 @@ const InfoSection = ({ number, handleBack, handleNext }) => {
     />,
   ]
   const headers = ["Phase One", "Phase Two", "Phase Three"]
-  const paragraphs = ["Phase One text", "Phase Two TEXT", "Phase Three TEXT"]
+  const paragraphs = [
+    "Text for para 1, dolor sit amet consectetur adipisicing elit. Temporibus maxime laborum magnam rem quas blanditiis aliquid harum debitis sequi ipsam, quo, nisi, exercitationem commodi accusamus rerum voluptatem voluptate earum minus non aut eveniet assumenda fuga corrupti? Dolorum totam nam sed reiciendis numquam explicabo repellendus ut optio vel eum laboriosam, nostrum aut quisquam rem similique animi inventore sapiente odit doloremque recusandae architecto sit. Odio ullam amet temporibus totam, sed exercitationem consequatur commodi? Quae vitae magni reprehenderit temporibus fugiat nihil deserunt. Temporibus porro enim totam quo explicabo culpa atque, rem placeat pariatur sequi suscipit autem, doloribus ut commodi molestias. Similique, amet vitae!",
+    "Text for para 2, dolor sit amet consectetur adipisicing elit. Temporibus maxime laborum magnam rem quas blanditiis aliquid harum debitis sequi ipsam, quo, nisi, exercitationem commodi accusamus rerum voluptatem voluptate earum minus non aut eveniet assumenda fuga corrupti? Dolorum totam nam sed reiciendis numquam explicabo repellendus ut optio vel eum laboriosam, nostrum aut quisquam rem similique animi inventore sapiente odit doloremque recusandae architecto sit. Odio ullam amet temporibus totam, sed exercitationem consequatur commodi? Quae vitae magni reprehenderit temporibus fugiat nihil deserunt. Temporibus porro enim totam quo explicabo culpa atque, rem placeat pariatur sequi suscipit autem, doloribus ut commodi molestias. Similique, amet vitae!",
+    "Text for para 3, dolor sit amet consectetur adipisicing elit. Temporibus maxime laborum magnam rem quas blanditiis aliquid harum debitis sequi ipsam, quo, nisi, exercitationem commodi accusamus rerum voluptatem voluptate earum minus non aut eveniet assumenda fuga corrupti? Dolorum totam nam sed reiciendis numquam explicabo repellendus ut optio vel eum laboriosam, nostrum aut quisquam rem similique animi inventore sapiente odit doloremque recusandae architecto sit. Odio ullam amet temporibus totam, sed exercitationem consequatur commodi? Quae vitae magni reprehenderit temporibus fugiat nihil deserunt. Temporibus porro enim totam quo explicabo culpa atque, rem placeat pariatur sequi suscipit autem, doloribus ut commodi molestias. Similique, amet vitae!",
+  ]
+  const styles = useSpring({
+    to: [{ opacity: 1, transform: "translate3d(0%,0,0) scale(1)" }],
+    from: {
+      opacity: 0,
+      transform: `translate3d(${direction === 1 ? -30 : 30}%,0,0) scale(0.8)`,
+    },
+    reset: change,
+  })
+
   return (
     <Container>
       <StyledContainer>
-        {imageData[number]}
+        {imageData[activeStep]}
         <StyledInfoSection>
           <StyledLeftArrow onClick={handleBack}>Back</StyledLeftArrow>
           <StyledTextContainer>
             <HeaderContainer>
-              <StyledHeader>{headers[number]}</StyledHeader>
+              <StyledHeader>{headers[activeStep]}</StyledHeader>
               <Line></Line>
             </HeaderContainer>
-            <p style={{ maxWidth: "60ch" }}>
-              L Ever since I graduated at Wageningen University in 2014, I have
-              been passionately growing all sorts of culinary and medicinal
-              mushrooms. Soon I came across the Reishi mushroom and ever since
-              that first encounter, I have focused my efforts on how to best
-              grow and consume this mushroom species. For the past five years,
-              this mushroom species has introduced me into the world of
-              mushrooms and has strengthened my interest in the field of
-              mycology.
-            </p>
-            <p>{paragraphs[number]}</p>
+            <animated.p style={styles}>{paragraphs[activeStep]}</animated.p>
           </StyledTextContainer>
           <StyledRightArrow onClick={handleNext}>Next</StyledRightArrow>
         </StyledInfoSection>

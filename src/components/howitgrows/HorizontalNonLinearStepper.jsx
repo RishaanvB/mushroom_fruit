@@ -83,6 +83,8 @@ function ColorlibStepIcon(props) {
 
 export default function HorizontalNonLinearStepper() {
   const [activeStep, setActiveStep] = useState(0)
+  const [direction, setDirection] = useState(1)
+
 
   const totalSteps = () => {
     return steps.length
@@ -98,12 +100,15 @@ export default function HorizontalNonLinearStepper() {
   const handleNext = () => {
     const newActiveStep = isLastStep() ? 0 : activeStep + 1
     setActiveStep(newActiveStep)
+    setDirection(1)
   }
 
   const handleBack = () => {
     const newActiveStep = isFirstStep() ? totalSteps() - 1 : activeStep - 1
 
     setActiveStep(newActiveStep)
+    setDirection(-1)
+
   }
 
   const handleStep = step => () => {
@@ -133,9 +138,10 @@ export default function HorizontalNonLinearStepper() {
       </StyledBox>
 
       <InfoSection
-        number={activeStep}
+        activeStep={activeStep}
         handleNext={handleNext}
         handleBack={handleBack}
+        direction={direction}
       />
     </StyledContainer>
   )
