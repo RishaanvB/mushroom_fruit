@@ -77,7 +77,7 @@ const ReishiBenefitsSection = () => {
       </Container>
       <StyledSection>
         <StyledContainer>
-          <StyledBenefitContainer data-aos="fade-right">
+          <StyledBenefitContainer data-aos="zoom-in-up">
             <StyledSmallHeader>
               Consuming <GiSlicedMushroom size="3rem" color="white" />
             </StyledSmallHeader>
@@ -87,7 +87,7 @@ const ReishiBenefitsSection = () => {
               complete guide on growing and maintaining your reishi here.
             </StyledInfoText>
           </StyledBenefitContainer>
-          <StyledBenefitContainer data-aos="fade-left">
+          <StyledBenefitContainer data-aos="zoom-in-up">
             <StyledSmallHeader>
               Health <FaHeartbeat size="3rem" color="white" />
             </StyledSmallHeader>
