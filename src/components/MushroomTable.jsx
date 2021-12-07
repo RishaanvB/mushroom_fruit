@@ -109,7 +109,7 @@ function TablePaginationActions(props) {
   )
 }
 
-export default function TestTable() {
+export default function MushroomTable() {
   const [page, setPage] = useState(0)
   const [rowsPerPage, setRowsPerPage] = useState(10)
 
@@ -152,7 +152,10 @@ export default function TestTable() {
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - dataArray.length) : 0
   return (
     <>
-      <TableContainer component={Paper} sx={{ padding: "1rem", marginBottom: '4rem' }}>
+      <TableContainer
+        component={Paper}
+        sx={{ padding: "1rem", marginBottom: "4rem" }}
+      >
         <Table
           sx={{ minWidth: 650 }}
           size="small"
