@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import { StaticImage } from "gatsby-plugin-image"
 
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail"
 import Avatar from "@mui/material/Avatar"
 
 import Layout from "../components/layout"
@@ -11,6 +10,7 @@ import LayoutBackground from "../styles/LayoutBackground"
 import { Container } from "../styles/CustomStyles"
 
 import background from "../images/banner-howitworks.png"
+import { HiOutlineMail } from "react-icons/hi"
 
 const StyledHeader = styled.h1`
   position: relative;
@@ -126,7 +126,7 @@ const About = () => {
             </StyledContactSmall>
             <StyledAvatarContainer>
               <Avatar sx={{ bgcolor: "#F3BC77 " }}>
-                <AlternateEmailIcon />
+                <HiOutlineMail />
               </Avatar>
               <address style={{ margin: "0" }}>
                 {" "}
