@@ -1,58 +1,63 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import ImageList from "@mui/material/ImageList"
 import ImageListItem from "@mui/material/ImageListItem"
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
-
+import ImageListItemBar from "@mui/material/ImageListItemBar"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+import { useSpring, animated } from "react-spring"
 
+const animatedDiv = animated(ImageListItem)
 export default function WovenImageList() {
-  const imageData = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
       allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
         edges {
           node {
             childImageSharp {
-              id
               gatsbyImageData
             }
+            name
           }
         }
       }
     }
   `)
-  console.log(imageData.allFile.edges[0].node.childImageSharp.gatsbyImageData)
+  useEffect(() => {
+    const smallWidth = window.matchMedia("(min-width: 0px)")
+    const mediumWidth = window.matchMedia("(min-width: 768px)")
+    const largeWidth = window.matchMedia("(min-width: 1025px)")
+
+    const listener = () => {
+      smallWidth.matches && setCols(1)
+      mediumWidth.matches && setCols(2)
+      largeWidth.matches && setCols(3)
+    }
+    window.addEventListener("resize", listener)
+    return () => window.removeEventListener("resize", listener)
+  }, [])
+  const [cols, setCols] = useState(3)
+
+  const images = data.allFile.edges.map(imageNode => (
+    <ImageListItem key={imageNode.node.name}>
+      <GatsbyImage
+        image={getImage(imageNode.node)}
+        alt={imageNode.node.name}
+        key={imageNode.node.name}
+      />
+      <ImageListItemBar position="below" title={imageNode.node.name} />
+    </ImageListItem>
+  ))
+
   return (
     <>
-      <ImageList sx={{ margin: "0 auto" }} variant="woven" cols={3} gap={10}>
-        {/* {itemData.map(item => item)}
-      
-      */}
-        {imageArray}
+      <ImageList
+        sx={{ margin: "0 auto" }}
+        variant="masonry"
+        cols={cols}
+        gap={8}
+      >
+        {images}
       </ImageList>
-      <h1>image graphql</h1>
-
-      <GatsbyImage
-        image={imageData.allFile.edges[0].node.childImageSharp.gatsbyImageData}
-        alt={"placeholder image"}
-      />
     </>
   )
 }
-
-const imageArray = [
-  <StaticImage
-    src={"../images/gallery/gallery-placeholder-2.png"}
-    alt={"placeholder image"}
-    key="1"
-  />,
-  <StaticImage
-    src={"../images/gallery/gallery-placeholder-3.png"}
-    alt={"placeholder image"}
-    key="2"
-  />,
-  <StaticImage
-    src={"../images/gallery/gallery-placeholder-1.png"}
-    alt={"placeholder image"}
-    key="3"
-  />,
-]
