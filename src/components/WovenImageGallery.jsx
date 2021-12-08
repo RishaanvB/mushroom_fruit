@@ -4,9 +4,7 @@ import ImageListItem from "@mui/material/ImageListItem"
 import ImageListItemBar from "@mui/material/ImageListItemBar"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
-import { useSpring, animated } from "react-spring"
 
-const animatedDiv = animated(ImageListItem)
 export default function WovenImageList() {
   const data = useStaticQuery(graphql`
     {
