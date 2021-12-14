@@ -11,7 +11,7 @@ import { Container } from "../styles/CustomStyles"
 
 import background from "../images/banner-howitworks.png"
 import { HiOutlineMail } from "react-icons/hi"
-
+import { myContext } from "../context/Provider"
 const StyledHeader = styled.h1`
   position: relative;
   z-index: 8;
@@ -78,8 +78,8 @@ const StyledAvatarContainer = styled.address`
   margin-top: 1rem;
 `
 const About = () => {
-  
-
+  const { isDark, setTheme } = useContext(myContext)
+  console.log(isDark, "theme context in about.js")
   const headerText = "About me"
   return (
     <Layout pageTitle="About me">
@@ -96,7 +96,9 @@ const About = () => {
 
           <StyledAboutSection>
             <HeaderContainer>
-              <StyledHeader>hugo</StyledHeader>
+              <StyledHeader>
+                {isDark === "nl" ? "nederlands" : "engels"}
+              </StyledHeader>
               <Divider />
             </HeaderContainer>
             <TextInfoIntro>

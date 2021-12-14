@@ -3,6 +3,7 @@ import styled from "styled-components"
 import background from "../images/hero-bg-placeholder.webp"
 import { Container, Button } from "../styles/CustomStyles"
 import { useSpring, animated } from "react-spring"
+import { myContext } from "../context/Provider"
 
 const StyledBGSection = styled.section`
   width: 100%;
@@ -37,6 +38,8 @@ const StyledSubHeader = styled(animated.p)`
 `
 
 const HeroSection = () => {
+  const { isDark, setTheme } = useContext(myContext)
+
   const left2Right = useSpring({
     from: { transform: "translateX(-50px)", opacity: 0 },
     to: { transform: "translateX(0px)", opacity: 1 },
@@ -50,7 +53,8 @@ const HeroSection = () => {
     <StyledBGSection>
       <Container>
         <StyledHeader style={left2Right}>
-          Grow your own indoor mushroom!
+          {isDark === 'nl' ? 'nederlands' : 'Grow your own indoor mushroom!'}
+          
         </StyledHeader>
 
         <section style={{ overflow: "hidden" }}>

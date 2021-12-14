@@ -5,7 +5,7 @@ import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
 import styled from "styled-components"
 import { MdOutlineClose } from "react-icons/md"
-
+import { myContext } from '../context/Provider';
 import { RiMenu3Line } from "react-icons/ri"
 
 const StyledNavContainer = styled.nav`
@@ -79,6 +79,7 @@ const CloseMenuIcon = styled(MdOutlineClose)`
   cursor: pointer;
 `
 const NavBar = () => {
+  const {isDark, changeTheme} = useContext(myContext)
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -137,7 +138,7 @@ const NavBar = () => {
         </StyledLink>
 
         {/* start language switch */}
-       
+       <button onClick={changeTheme}>CLICK ME</button>
       </StyledNavigationBar>
       <StyledMenu color={"white"} onClick={toggleDrawer(true)} />
       <Drawer open={isOpen} onClose={toggleDrawer(false)} anchor={"right"}>

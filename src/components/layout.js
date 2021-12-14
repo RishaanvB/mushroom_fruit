@@ -3,7 +3,7 @@ import "./layout.css"
 import MainHeader from "./mainheader"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
-
+import { myContext } from "../context/Provider"
 const Layout = ({ children, pageTitle }) => {
   useEffect(
     () => (document.title = `Mushroom Fruit | ${pageTitle}` || "Mushroom Fruit")
@@ -56,8 +56,7 @@ const Layout = ({ children, pageTitle }) => {
       </Helmet>
 
       <MainHeader />
-
-      <main >{children}</main>
+      <main>{children}</main>
 
       <Footer />
     </>
