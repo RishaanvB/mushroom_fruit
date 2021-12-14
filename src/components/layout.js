@@ -3,8 +3,6 @@ import "./layout.css"
 import MainHeader from "./mainheader"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
-import { LangContextProvider } from "../context/LangContext"
-import {LangContext} from "../context/LangContext"
 
 const Layout = ({ children, pageTitle }) => {
   useEffect(
@@ -12,7 +10,7 @@ const Layout = ({ children, pageTitle }) => {
   )
 
   return (
-    <LangContextProvider>
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         {/* <!-- Primary Meta Tags --> */}
@@ -62,7 +60,7 @@ const Layout = ({ children, pageTitle }) => {
       <main >{children}</main>
 
       <Footer />
-    </LangContextProvider>
+    </>
   )
 }
 

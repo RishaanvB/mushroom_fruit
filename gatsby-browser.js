@@ -10,8 +10,3 @@
 
 import "@fontsource/poppins" // Defaults to weight 400 with all styles included.
 import React from 'react';
-import { LangContextProvider } from './src/context/LangContext';
-
-export const wrapRootElement = ({ element }) => (
-  <LangContextProvider>{element}</LangContextProvider>
-);

@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-import { LangContext } from "../context/LangContext"
 
 import { StaticImage } from "gatsby-plugin-image"
 

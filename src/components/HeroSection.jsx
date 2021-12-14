@@ -1,9 +1,8 @@
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import background from "../images/hero-bg-placeholder.webp"
 import { Container, Button } from "../styles/CustomStyles"
 import { useSpring, animated } from "react-spring"
-import { LangContext } from "../context/LangContext"
 
 const StyledBGSection = styled.section`
   width: 100%;
@@ -38,10 +37,6 @@ const StyledSubHeader = styled(animated.p)`
 `
 
 const HeroSection = () => {
-  const { lang } = useContext(LangContext)
-
-
-
   const left2Right = useSpring({
     from: { transform: "translateX(-50px)", opacity: 0 },
     to: { transform: "translateX(0px)", opacity: 1 },
@@ -55,8 +50,7 @@ const HeroSection = () => {
     <StyledBGSection>
       <Container>
         <StyledHeader style={left2Right}>
-          {lang === 'nl' && 'Groei je eigen paddestoel!'}
-          {lang === 'en' && 'Grow your own indoor mushroom!'}
+          Grow your own indoor mushroom!
         </StyledHeader>
 
         <section style={{ overflow: "hidden" }}>
