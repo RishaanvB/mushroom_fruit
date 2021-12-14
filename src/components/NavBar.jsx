@@ -13,8 +13,6 @@ const StyledNavContainer = styled.nav`
   justify-content: flex-start;
   width: 100%;
   column-gap: 8rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 `
 const StyledNavigationBar = styled.nav`
   display: flex;

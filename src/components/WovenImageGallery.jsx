@@ -21,9 +21,9 @@ export default function WovenImageList() {
     }
   `)
   useEffect(() => {
-    const smallWidth = window.matchMedia("(min-width: 0px)")
-    const mediumWidth = window.matchMedia("(min-width: 768px)")
     const largeWidth = window.matchMedia("(min-width: 1025px)")
+    const mediumWidth = window.matchMedia("(min-width: 768px)")
+    const smallWidth = window.matchMedia("(min-width: 0px)")
 
     const listener = () => {
       smallWidth.matches && setCols(1)
@@ -33,7 +33,7 @@ export default function WovenImageList() {
     window.addEventListener("resize", listener)
     return () => window.removeEventListener("resize", listener)
   }, [])
-  const [cols, setCols] = useState(3)
+  const [cols, setCols] = useState()
 
   const images = data.allFile.edges.map(imageNode => (
     <ImageListItem key={imageNode.node.name}>
