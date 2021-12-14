@@ -5,7 +5,7 @@ import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
 import styled from "styled-components"
 import { MdOutlineClose } from "react-icons/md"
-import { myContext } from '../context/Provider';
+import { languageContext } from "../context/Provider"
 import { RiMenu3Line } from "react-icons/ri"
 
 const StyledNavContainer = styled.nav`
@@ -79,7 +79,7 @@ const CloseMenuIcon = styled(MdOutlineClose)`
   cursor: pointer;
 `
 const NavBar = () => {
-  const {isDark, changeTheme} = useContext(myContext)
+  const { isEnglish, changeLanguage } = useContext(languageContext)
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -103,12 +103,20 @@ const NavBar = () => {
     >
       <StyledNavigationBarMobile>
         <CloseMenuIcon size={"2rem"} onClick={toggleDrawer(false)} />
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/how-it-grows">How it grows</StyledLink>
-        <StyledLink to="/consuming-reishi">Consuming reishi</StyledLink>
+        <StyledLink to="/">{"Home"}</StyledLink>
+        <StyledLink to="/how-it-grows">
+          {isEnglish ? "How it grows" : "Hoe het groeit"}
+        </StyledLink>
+        <StyledLink to="/consuming-reishi">
+          {isEnglish ? "Consuming Reishi" : "Consumeren"}
+        </StyledLink>
         <StyledLink to="/faq">FAQ</StyledLink>
-        <StyledLink to="/gallery">Gallery</StyledLink>
-        <StyledLink to="/about">About me</StyledLink>
+        <StyledLink to="/gallery">
+          {isEnglish ? "Gallery" : "Gallerij"}
+        </StyledLink>
+        <StyledLink to="/about">
+          {isEnglish ? "About me" : "Over mij"}
+        </StyledLink>
       </StyledNavigationBarMobile>
     </Box>
   )
@@ -122,23 +130,23 @@ const NavBar = () => {
           Home
         </StyledLink>
         <StyledLink activeClassName="active" to="/how-it-grows">
-          How it grows
+          {isEnglish ? "How it grows" : "Hoe het groeit"}
         </StyledLink>
         <StyledLink activeClassName="active" to="/consuming-reishi">
-          Consuming reishi
+          {isEnglish ? "Consuming Reishi" : "Consumeren"}
         </StyledLink>
         <StyledLink activeClassName="active" to="/faq">
           FAQ
         </StyledLink>
         <StyledLink activeClassName="active" to="/gallery">
-          Gallery
+          {isEnglish ? "Gallery" : "Gallerij"}
         </StyledLink>
         <StyledLink activeClassName="active" to="/about">
-          About me
+          {isEnglish ? "About me" : "Over mij"}
         </StyledLink>
 
         {/* start language switch */}
-       <button onClick={changeTheme}>CLICK ME</button>
+        <button onClick={changeLanguage}>CLICK ME</button>
       </StyledNavigationBar>
       <StyledMenu color={"white"} onClick={toggleDrawer(true)} />
       <Drawer open={isOpen} onClose={toggleDrawer(false)} anchor={"right"}>

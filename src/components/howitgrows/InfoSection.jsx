@@ -1,10 +1,10 @@
 import { StaticImage } from "gatsby-plugin-image"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import styled from "styled-components"
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs"
 import { Container } from "../../styles/CustomStyles"
 import { useSpring, animated } from "react-spring"
-
+import { languageContext } from "../../context/Provider"
 const StyledContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -102,6 +102,7 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
     setChange(!change)
   }, [])
   const [change, setChange] = useState(false)
+  const { isEnglish } = useContext(languageContext)
   const imageData = [
     <StaticImage
       width={520}
@@ -143,7 +144,8 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
       <StyledContainer>
         {imageData[activeStep]}
         <StyledInfoSection>
-          <StyledLeftArrow onClick={handleBack}>Back</StyledLeftArrow>
+          <StyledLeftArrow onClick={handleBack} />
+
           <StyledTextContainer>
             <HeaderContainer>
               <StyledHeader>{headers[activeStep]}</StyledHeader>
@@ -151,7 +153,7 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
             </HeaderContainer>
             <animated.p style={styles}>{paragraphs[activeStep]}</animated.p>
           </StyledTextContainer>
-          <StyledRightArrow onClick={handleNext}>Next</StyledRightArrow>
+          <StyledRightArrow onClick={handleNext} />
         </StyledInfoSection>
       </StyledContainer>
     </Container>

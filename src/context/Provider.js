@@ -1,26 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 
-export const myContext = React.createContext();
+export const languageContext = React.createContext()
 
 const Provider = props => {
-  const [isDark, setTheme] = useState('nl');
-const changeTheme = ()=>{
-    isDark === 'nl' ? setTheme('en') : setTheme('nl')
-}
+  const [isEnglish, SetIsEnglish] = useState(true)
+  const changeLanguage = () => SetIsEnglish(!isEnglish)
   return (
-    <myContext.Provider value={{
-      isDark,
-      changeTheme: changeTheme
-    }}>
+    <languageContext.Provider
+      value={{
+        isEnglish,
+        changeLanguage,
+      }}
+    >
       {props.children}
-    </myContext.Provider>
+    </languageContext.Provider>
   )
-};
+}
 
-
-
-export default ({ element }) => (
-    <Provider>
-      {element}
-    </Provider>
-  );
+export default ({ element }) => <Provider>{element}</Provider>
