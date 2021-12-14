@@ -1,16 +1,18 @@
-import React from "react"
-import { useEffect } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import "./layout.css"
 import MainHeader from "./mainheader"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
+import { LangContextProvider } from "../context/LangContext"
+import {LangContext} from "../context/LangContext"
 
 const Layout = ({ children, pageTitle }) => {
   useEffect(
     () => (document.title = `Mushroom Fruit | ${pageTitle}` || "Mushroom Fruit")
   )
+
   return (
-    <>
+    <LangContextProvider>
       <Helmet>
         <meta charSet="utf-8" />
         {/* <!-- Primary Meta Tags --> */}
@@ -54,10 +56,13 @@ const Layout = ({ children, pageTitle }) => {
           content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
         />
       </Helmet>
+
       <MainHeader />
-      <main>{children}</main>
+
+      <main >{children}</main>
+
       <Footer />
-    </>
+    </LangContextProvider>
   )
 }
 

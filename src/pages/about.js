@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
+import { LangContext } from "../context/LangContext"
 
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -78,6 +79,8 @@ const StyledAvatarContainer = styled.address`
   margin-top: 1rem;
 `
 const About = () => {
+  
+
   const headerText = "About me"
   return (
     <Layout pageTitle="About me">
@@ -122,7 +125,7 @@ const About = () => {
             <StyledContactSmall>
               If you have any more questions, business inquiries, or just simply
               would like to know more about me and my future endeavors, please
-              don’t hesitate to contact me at the following address:
+              don't hesitate to contact me at the following address:
             </StyledContactSmall>
             <StyledAvatarContainer>
               <Avatar sx={{ bgcolor: "#F3BC77 " }}>

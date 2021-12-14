@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
 import styled from "styled-components"
 import { MdOutlineClose } from "react-icons/md"
+import { LangContext } from "../context/LangContext"
 
 import { RiMenu3Line } from "react-icons/ri"
 
@@ -79,6 +80,8 @@ const CloseMenuIcon = styled(MdOutlineClose)`
   cursor: pointer;
 `
 const NavBar = () => {
+  const { lang, setLang } = useContext(LangContext)
+
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDrawer = state => event => {
@@ -134,6 +137,11 @@ const NavBar = () => {
         <StyledLink activeClassName="active" to="/about">
           About me
         </StyledLink>
+
+        {/* start language switch */}
+        <button onClick={() => (lang === "nl" ? setLang("en") : setLang("nl"))}>
+          {lang === "nl" ? "EN" : "NL"}
+        </button>
       </StyledNavigationBar>
       <StyledMenu color={"white"} onClick={toggleDrawer(true)} />
       <Drawer open={isOpen} onClose={toggleDrawer(false)} anchor={"right"}>

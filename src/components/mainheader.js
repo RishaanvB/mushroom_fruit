@@ -22,9 +22,7 @@ const StyledContainer = styled(Container)`
 const MainHeader = () => {
   useEffect(() => {
     scrolled()
-    return function cleanUp() {
-      window.removeEventListener("scroll", handleCollapseNav)
-    }
+    return () => window.removeEventListener("scroll", handleCollapseNav)
   })
 
   const [status, collapse] = useState(false)

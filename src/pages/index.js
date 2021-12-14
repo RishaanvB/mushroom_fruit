@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useContext} from "react"
 
 import Layout from "../components/layout"
 import HowItWorksSection from "../components/HowItWorksSection"
@@ -7,8 +7,9 @@ import ReishiBenefitsSection from "../components/ReishiBenefitsSection"
 import GallerySection from "../components/GallerySection"
 
 const IndexPage = () => {
+
   return (
-    <Layout pageTitle="Home">
+    <Layout  pageTitle="Home">
       <HeroSection />
       <HowItWorksSection />
       <ReishiBenefitsSection />
