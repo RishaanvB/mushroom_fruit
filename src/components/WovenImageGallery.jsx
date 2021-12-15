@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
+
 import ImageList from "@mui/material/ImageList"
 import ImageListItem from "@mui/material/ImageListItem"
 import ImageListItemBar from "@mui/material/ImageListItemBar"
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -21,9 +23,12 @@ export default function WovenImageList() {
     }
   `)
   useEffect(() => {
-    const largeWidth = window.matchMedia("(min-width: 1025px)")
-    const mediumWidth = window.matchMedia("(min-width: 768px)")
     const smallWidth = window.matchMedia("(min-width: 0px)")
+    const mediumWidth = window.matchMedia("(min-width: 768px)")
+    const largeWidth = window.matchMedia("(min-width: 1025px)")
+    smallWidth.matches && setCols(1)
+    mediumWidth.matches && setCols(2)
+    largeWidth.matches && setCols(3)
 
     const listener = () => {
       smallWidth.matches && setCols(1)
@@ -32,8 +37,8 @@ export default function WovenImageList() {
     }
     window.addEventListener("resize", listener)
     return () => window.removeEventListener("resize", listener)
-  }, [])
-  const [cols, setCols] = useState(3)
+  })
+  const [cols, setCols] = useState()
 
   const images = data.allFile.edges.map(imageNode => (
     <ImageListItem key={imageNode.node.name}>
