@@ -1,11 +1,16 @@
-import React from "react"
-import Layout from "../components/layout"
+import React, { useContext } from "react"
 import styled from "styled-components"
-import background from "../images/consuming-reishi-bg-placeholder.png"
-import LayoutBackground from "../styles/LayoutBackground"
-import { Container, UnderlineHeader } from "../styles/CustomStyles"
 import { StaticImage } from "gatsby-plugin-image"
+
+import Layout from "../components/layout"
+import LayoutBackground from "../styles/LayoutBackground"
 import MushroomTable from "../components/MushroomTable"
+
+import { languageContext } from "../context/Provider"
+
+import { Container, UnderlineHeader } from "../styles/CustomStyles"
+
+import background from "../images/consuming-reishi-bg-placeholder.png"
 
 const StyledContainer = styled(Container)`
   max-width: 730px;
@@ -34,7 +39,9 @@ const StyledBottomP = styled.p`
   margin: 2rem 0 4rem 0;
 `
 const ConsumingReishi = () => {
-  const headerText = "consuming reishi"
+  const { isEnglish } = useContext(languageContext)
+
+  const headerText = isEnglish ? "consuming reishi" : "consumeren reishi"
   return (
     <Layout pageTitle="Consuming reishi">
       <LayoutBackground background={background} headerText={headerText} />

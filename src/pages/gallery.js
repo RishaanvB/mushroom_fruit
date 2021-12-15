@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
+
 import Layout from "../components/layout"
+import WovenImageGallery from "../components/WovenImageGallery"
+import { languageContext } from "../context/Provider"
+
 import LayoutBackground from "../styles/LayoutBackground"
 import { Container } from "../styles/CustomStyles"
-import WovenImageGallery from "../components/WovenImageGallery"
+import styled from "styled-components"
+
 import background from "../images/hero-bg-placeholder.webp"
-import styled from 'styled-components'
 
 const StyledContainer = styled(Container)`
   margin-top: 6rem;
@@ -12,9 +16,11 @@ const StyledContainer = styled(Container)`
 `
 
 const Gallery = () => {
+  const { isEnglish } = useContext(languageContext)
+  const headerText = isEnglish ? "Gallery" : "gallerij"
   return (
     <Layout pageTitle="Gallery">
-      <LayoutBackground headerText="Gallery" background={background} />
+      <LayoutBackground headerText={headerText} background={background} />
       <StyledContainer>
         <WovenImageGallery />
       </StyledContainer>

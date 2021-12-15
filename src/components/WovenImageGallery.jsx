@@ -33,7 +33,7 @@ export default function WovenImageList() {
     window.addEventListener("resize", listener)
     return () => window.removeEventListener("resize", listener)
   }, [])
-  const [cols, setCols] = useState()
+  const [cols, setCols] = useState(3)
 
   const images = data.allFile.edges.map(imageNode => (
     <ImageListItem key={imageNode.node.name}>

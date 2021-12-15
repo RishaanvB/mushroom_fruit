@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 
-export const languageContext = React.createContext()
+export const languageContext = React.createContext({
+  isEnglish: true,
+  changeLanguage: () => {},
+})
 
 const Provider = props => {
   const [isEnglish, SetIsEnglish] = useState(true)
@@ -17,4 +20,5 @@ const Provider = props => {
   )
 }
 
-export default ({ element }) => <Provider>{element}</Provider>
+const LanguageProvider = ({ element }) => <Provider>{element}</Provider>
+export default LanguageProvider

@@ -1,14 +1,20 @@
 import React, { useState, useContext } from "react"
+import styled from "styled-components"
+
 import { Link as GatsbyLink } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+
 import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
-import styled from "styled-components"
+
 import { MdOutlineClose } from "react-icons/md"
-import { languageContext } from "../context/Provider"
 import { RiMenu3Line } from "react-icons/ri"
 
+import { languageContext } from "../context/Provider"
+import LanguageSwitchBtns from "./LanguageSwitchBtns"
+
 const StyledNavContainer = styled.nav`
+  position: relative;
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -145,9 +151,10 @@ const NavBar = () => {
           {isEnglish ? "About me" : "Over mij"}
         </StyledLink>
 
-        {/* start language switch */}
-        <button onClick={changeLanguage}>CLICK ME</button>
+        {/* MOBILE VERSION */}
       </StyledNavigationBar>
+        <LanguageSwitchBtns />
+
       <StyledMenu color={"white"} onClick={toggleDrawer(true)} />
       <Drawer open={isOpen} onClose={toggleDrawer(false)} anchor={"right"}>
         {list()}

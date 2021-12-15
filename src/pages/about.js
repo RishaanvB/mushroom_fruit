@@ -12,6 +12,7 @@ import { Container } from "../styles/CustomStyles"
 import background from "../images/banner-howitworks.png"
 import { HiOutlineMail } from "react-icons/hi"
 import { languageContext } from "../context/Provider"
+
 const StyledHeader = styled.h1`
   position: relative;
   z-index: 8;
@@ -78,8 +79,8 @@ const StyledAvatarContainer = styled.address`
   margin-top: 1rem;
 `
 const About = () => {
-  const { isEnglish, changeLanguage } = useContext(languageContext)
-  const headerText = "About me"
+  const { isEnglish } = useContext(languageContext)
+  const headerText = isEnglish ? "About me" : "Over mij"
   return (
     <Layout pageTitle="About me">
       <LayoutBackground background={background} headerText={headerText} />
