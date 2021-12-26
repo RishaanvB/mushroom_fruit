@@ -107,28 +107,27 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
     <StaticImage
       width={520}
       aspectRatio={1 / 1}
-      src="../../images/placeholder-1.png"
+      src="../../images/step1.jpg"
       alt=""
     />,
     <StaticImage
       width={520}
       aspectRatio={1 / 1}
       fit="cover"
-      src="../../images/placeholder-2.png"
+      src="../../images/step2.jpg"
       alt="placeholder"
     />,
     <StaticImage
       width={520}
-      aspectRatio={1 / 1}
-      src="../../images/placeholder-3.png"
+      src="../../images/step3.jpg"
       alt=""
     />,
   ]
-  const headers = ["Phase One", "Phase Two", "Phase Three"]
+  const headers = ["Step One", "Step Two", "Step Three"]
   const paragraphs = [
-    "Text for para 1, dolor sit amet consectetur adipisicing elit. Temporibus maxime laborum magnam rem quas blanditiis aliquid harum debitis sequi ipsam, quo, nisi, exercitationem commodi accusamus rerum voluptatem voluptate earum minus non aut eveniet assumenda fuga corrupti? Dolorum totam nam sed reiciendis numquam explicabo repellendus ut optio vel eum laboriosam, nostrum aut quisquam rem similique animi inventore sapiente odit doloremque recusandae architecto sit. Odio ullam amet temporibus totam, sed exercitationem consequatur commodi? Quae vitae magni reprehenderit temporibus fugiat nihil deserunt. Temporibus porro enim totam quo explicabo culpa atque, rem placeat pariatur sequi suscipit autem, doloribus ut commodi molestias. Similique, amet vitae!",
-    "Text for para 2, dolor sit amet consectetur adipisicing elit. Temporibus maxime laborum magnam rem quas blanditiis aliquid harum debitis sequi ipsam, quo, nisi, exercitationem commodi accusamus rerum voluptatem voluptate earum minus non aut eveniet assumenda fuga corrupti? Dolorum totam nam sed reiciendis numquam explicabo repellendus ut optio vel eum laboriosam, nostrum aut quisquam rem similique animi inventore sapiente odit doloremque recusandae architecto sit. Odio ullam amet temporibus totam, sed exercitationem consequatur commodi? Quae vitae magni reprehenderit temporibus fugiat nihil deserunt. Temporibus porro enim totam quo explicabo culpa atque, rem placeat pariatur sequi suscipit autem, doloribus ut commodi molestias. Similique, amet vitae!",
-    "Text for para 3, dolor sit amet consectetur adipisicing elit. Temporibus maxime laborum magnam rem quas blanditiis aliquid harum debitis sequi ipsam, quo, nisi, exercitationem commodi accusamus rerum voluptatem voluptate earum minus non aut eveniet assumenda fuga corrupti? Dolorum totam nam sed reiciendis numquam explicabo repellendus ut optio vel eum laboriosam, nostrum aut quisquam rem similique animi inventore sapiente odit doloremque recusandae architecto sit. Odio ullam amet temporibus totam, sed exercitationem consequatur commodi? Quae vitae magni reprehenderit temporibus fugiat nihil deserunt. Temporibus porro enim totam quo explicabo culpa atque, rem placeat pariatur sequi suscipit autem, doloribus ut commodi molestias. Similique, amet vitae!",
+    "Unpack the box and take the Reishi growkit parts. These consist of a plastic dome with three small plastic spacers attached, and a white plastic saucer. The sizing of the plastic dome and plastic spacers are specifically designed to create the perfect microclimate for the Reishi mushroom, with exactly the right air humidity and sufficient introduction of fresh air.",
+    "Once the Reishi growbag has turned white all the way until the bottom, the Reishi mycelium has colonized the complete block of sawdust substrate. This is the right moment to place the Reishi growbag under the plastic dome. Soon little mushrooms will start to appear inside the growbag, which will continue to grow upwards. At some point they will reach the tie-wrap and squeeze themselves through the very narrow opening. The mushroom does not need assistance, so there is no need to open up the tie-wrap opening.",
+    "After the mushroom has come out of the growbag, the mushroom will continue to grow in size. Take note of the white to rosy colored tissue, as this is the tissue that is still actively growing. Any yellow, orange or red tissue indicates “Reishi mushroom skin” that has stopped growing and that is hardening. The combination of all these colors results in an absolutely beautiful mushroom fruiting body. Feel free to harvest pieces of the fruiting body, even while the mushroom is still growing. The fruiting body will just continue to grow as if nothing happened!",
   ]
   const styles = useSpring({
     to: [{ opacity: 1, transform: "translate3d(0%,0,0) scale(1)" }],

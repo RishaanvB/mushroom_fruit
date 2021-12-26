@@ -110,8 +110,8 @@ const NavBar = () => {
       <StyledNavigationBarMobile>
         <CloseMenuIcon size={"2rem"} onClick={toggleDrawer(false)} />
         <StyledLink to="/">{"Home"}</StyledLink>
-        <StyledLink to="/how-it-grows">
-          {isEnglish ? "How it grows" : "Hoe het groeit"}
+        <StyledLink to="/how-it-works">
+          {isEnglish ? "How it works" : "Hoe het werkt"}
         </StyledLink>
         <StyledLink to="/consuming-reishi">
           {isEnglish ? "Consuming Reishi" : "Consumeren"}
@@ -135,8 +135,8 @@ const NavBar = () => {
         <StyledLink activeClassName="active" to="/">
           Home
         </StyledLink>
-        <StyledLink activeClassName="active" to="/how-it-grows">
-          {isEnglish ? "How it grows" : "Hoe het groeit"}
+        <StyledLink activeClassName="active" to="/how-it-works">
+          {isEnglish ? "How it works" : "Hoe het werkt"}
         </StyledLink>
         <StyledLink activeClassName="active" to="/consuming-reishi">
           {isEnglish ? "Consuming Reishi" : "Consumeren"}
