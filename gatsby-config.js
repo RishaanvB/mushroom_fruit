@@ -29,13 +29,7 @@ module.exports = {
         path: `${__dirname}/src/images/gallery`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `howitworks`,
-        path: `${__dirname}/src/images/howitworks`,
-      },
-    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
