@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 
-import background from "../images/bg-reishi-benefits-mainpage.webp"
+import background from "../images/banner-howitworks.png"
 import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
 import { Link } from "gatsby"
@@ -15,7 +15,7 @@ const StyledBGSection = styled.section`
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-size: cover;
-  background-image: url(${background});
+  background-image: url('https://images.unsplash.com/photo-1548048211-357ddb2c920f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
   background-position: center right;
   display: flex;
   flex-direction: column;

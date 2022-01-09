@@ -58,7 +58,7 @@ const HeroSection = () => {
 
         <section style={{ overflow: "hidden" }}>
           <StyledSubHeader style={top2Bottom}>
-            Now is your chance! With the Reishi Growkit from Mushroomfruit,
+            1:Now is your chance! With the Reishi Growkit from Mushroomfruit,
             growing indoors has never been easier !
           </StyledSubHeader>
         </section>

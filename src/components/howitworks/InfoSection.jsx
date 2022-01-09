@@ -22,6 +22,8 @@ const StyledInfoSection = styled.section`
   display: grid;
   grid-template-columns: auto 2fr auto;
   grid-column-gap: 1.5rem;
+  align-items: center;
+  min-height: 500px;
 
   @media screen and (min-width: 1025px) {
     align-self: start;
@@ -97,7 +99,14 @@ const StyledTextContainer = styled.div`
   }
 `
 
-const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
+const InfoSection = ({
+  activeStep,
+  handleBack,
+  handleNext,
+  direction,
+  isFirstStep,
+  isLastStep,
+}) => {
   useEffect(() => {
     setChange(!change)
   }, [])
@@ -117,11 +126,7 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
       src="../../images/step2.jpg"
       alt="placeholder"
     />,
-    <StaticImage
-      width={520}
-      src="../../images/step3.jpg"
-      alt=""
-    />,
+    <StaticImage width={520} src="../../images/step3.jpg" alt="" />,
   ]
   const headers = ["Step One", "Step Two", "Step Three"]
   const paragraphs = [
@@ -143,7 +148,13 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
       <StyledContainer>
         {imageData[activeStep]}
         <StyledInfoSection>
-          <StyledLeftArrow onClick={handleBack} />
+          {!isFirstStep() ? (
+            <StyledLeftArrow onClick={handleBack} />
+          ) : (
+            <div
+              style={{ display: "block", width: "50px", height: "100%" }}
+            ></div>
+          )}
 
           <StyledTextContainer>
             <HeaderContainer>
@@ -152,7 +163,7 @@ const InfoSection = ({ activeStep, handleBack, handleNext, direction }) => {
             </HeaderContainer>
             <animated.p style={styles}>{paragraphs[activeStep]}</animated.p>
           </StyledTextContainer>
-          <StyledRightArrow onClick={handleNext} />
+          {!isLastStep() && <StyledRightArrow onClick={handleNext} />}
         </StyledInfoSection>
       </StyledContainer>
     </Container>
