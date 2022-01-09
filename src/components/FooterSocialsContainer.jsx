@@ -12,34 +12,41 @@ const StyledLinkContainer = styled.div`
     align-self: center;
   }
 `
+const StyledSocials = styled.a`
+  color: #3a3632;
+  &:hover > * {
+    color: #9b8e81 ;
+    transition: color 0.1s ease-in;
+  }
+`
 
 const FooterSocialsContainer = () => {
   return (
     <StyledLinkContainer>
-      <a
+      <StyledSocials
         style={{ display: "block" }}
         href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <AiFillTwitterCircle size="2.5rem" color="#3A3632" />
-      </a>
-      <a
+        <AiFillTwitterCircle size="2.5rem" />
+      </StyledSocials>
+      <StyledSocials
         style={{ display: "block" }}
         href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiFacebookCircleFill size="2.5rem" color="#3A3632" />
-      </a>
-      <a
+        <RiFacebookCircleFill size="2.5rem" />
+      </StyledSocials>
+      <StyledSocials
         style={{ display: "block" }}
         href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiInstagramFill size="2.5rem" color="#3A3632" />
-      </a>
+        <RiInstagramFill size="2.5rem" />
+      </StyledSocials>
     </StyledLinkContainer>
   )
 }

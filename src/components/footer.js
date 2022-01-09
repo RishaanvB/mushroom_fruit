@@ -11,6 +11,7 @@ const StyledBackgroundFill = styled.section`
 `
 const StyledContainer = styled(Container)`
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
   padding-top: 2.5rem;
@@ -19,6 +20,7 @@ const StyledContainer = styled(Container)`
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    place-items: center start;
   }
 `
 
