@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { Container, UnderlineHeader } from "./CustomStyles"
+import { useSpring, animated } from "react-spring"
 
-const StyledBGSection = styled.section`
+const StyledBGSection = styled(animated.section)`
   width: 100%;
   height: 320px;
   background-size: cover;
+  background-color: "#472D23";
   background-image: url(${props => props.background});
   background-position: bottom right;
   display: flex;
@@ -20,8 +22,12 @@ const SyledUnderlineHeader = styled(UnderlineHeader)`
   padding-top: 3.5rem;
 `
 const LayoutBackground = ({ background, headerText }) => {
+  const opacityChange = useSpring({
+    from: {  opacity: 0 },
+    to: {  opacity: 1 },
+  })
   return (
-    <StyledBGSection background={background}>
+    <StyledBGSection style={opacityChange} background={background}>
       <Container>
         <SyledUnderlineHeader>{headerText}</SyledUnderlineHeader>
       </Container>

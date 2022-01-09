@@ -9,7 +9,7 @@ import Layout from "../components/layout"
 import LayoutBackground from "../styles/LayoutBackground"
 import { Container } from "../styles/CustomStyles"
 
-import background from "../images/banner-howitworks.png"
+import background from "../images/banner_about.png"
 import { HiOutlineMail } from "react-icons/hi"
 import { languageContext } from "../context/Provider"
 

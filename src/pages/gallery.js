@@ -8,7 +8,7 @@ import LayoutBackground from "../styles/LayoutBackground"
 import { Container } from "../styles/CustomStyles"
 import styled from "styled-components"
 
-import background from "../images/hero-bg-placeholder.webp"
+import background from "../images/banner_gallery.png"
 
 const StyledContainer = styled(Container)`
   margin-top: 6rem;

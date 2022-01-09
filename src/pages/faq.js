@@ -8,7 +8,7 @@ import { languageContext } from "../context/Provider"
 
 import { Container, UnderlineHeader } from "../styles/CustomStyles"
 
-import background from "../images/banner-howitworks.png"
+import background from "../images/banner_faq.png"
 
 const CustomStyledGridContainer = styled.div`
   display: grid;

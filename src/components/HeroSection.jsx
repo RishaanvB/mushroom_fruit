@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-import background from "../images/hero-bg-placeholder.webp"
 import { Container, Button } from "../styles/CustomStyles"
 import { useSpring, animated } from "react-spring"
 import { languageContext } from "../context/Provider"
