@@ -23,13 +23,12 @@ const HowItWorksContainer = () => {
           data-aos="fade-up"
           src="../images/reishi-homepage.png"
           alt="grown reishi in bag sprouted outwards on warm-colored background"
-          aspectRatio={1 / 1}
           transformOptions={{ fit: "cover" }}
         />
         <BulletpointsContainer />
       </StyledHowItWorksContainer>
       <Button>
-        <Link to="/how-it-grows">Show more</Link>{" "}
+        <Link to="/how-it-grows">13:Show more</Link>{" "}
       </Button>
     </>
   )

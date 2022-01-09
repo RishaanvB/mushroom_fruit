@@ -15,7 +15,7 @@ import { RiPlantLine } from "react-icons/ri"
 import { GiMushroomGills, GiPlantWatering } from "react-icons/gi"
 
 // display text for labels
-const steps = ["Plant a seed", "Watch it grow", "Enjoy!"]
+const steps = ["1:Plant a seed", "2:Watch it grow", "3:Enjoy!"]
 
 // styled components
 const StyledBox = styled(Box)`

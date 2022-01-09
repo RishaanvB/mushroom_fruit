@@ -20,6 +20,8 @@ const StyledBulletpointsContainer = styled.div`
 `
 
 const BulletpointsSection = styled.section`
+  color: #1b1917;
+
   display: grid;
   grid-template-columns: 2;
   grid-template-rows: 2;
@@ -28,13 +30,13 @@ const BulletpointsSection = styled.section`
   margin-top: 1rem;
 `
 const StyledHeader = styled.h1`
-  color: white;
+  /* color: white; */
   font-size: 1.2rem;
   grid-column: 2;
   margin-bottom: 0;
 `
 const StyledSubtext = styled.p`
-  color: white;
+  /* color: white; */
   font-size: 0.9rem;
   grid-column: 2;
   margin: 0;
@@ -50,34 +52,34 @@ const BulletpointsContainer = () => {
   return (
     <StyledBulletpointsContainer>
       <BulletpointsSection data-aos="fade-up">
-        <GiMushroomGills color="#CECBB2" size="2.5rem" />
-        <StyledHeader>Lorem ipsum dolor sit amet</StyledHeader>
+        <GiMushroomGills color="#504021" size="2.5rem" />
+        <StyledHeader>5:Lorem ipsum dolor sit amet</StyledHeader>
         <StyledSubtext>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+          6:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
           consectetur ut labore. Dolore, quasi ut.
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiSuperMushroom color="#e9e3c8" size="2.5rem" />
-        <StyledHeader>Lorem ipsum dolor sit amet</StyledHeader>
+        <GiSuperMushroom color="#3b2e13" size="2.5rem" />
+        <StyledHeader>7:Lorem ipsum dolor sit amet</StyledHeader>
         <StyledSubtext>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+          8:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
           consectetur ut labore. Dolore, quasi ut.
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiSpottedMushroom color="#c5c0aa" size="2.5rem" />
-        <StyledHeader>Lorem ipsum dolor sit amet</StyledHeader>
+        <GiSpottedMushroom color="#523f18" size="2.5rem" />
+        <StyledHeader>9:Lorem ipsum dolor sit amet</StyledHeader>
         <StyledSubtext>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+          10:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
           consectetur ut labore. Dolore, quasi ut.
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiTrunkMushroom color="#dbd9bc" size="2.5rem" />
-        <StyledHeader>Lorem ipsum dolor sit amet</StyledHeader>
+        <GiTrunkMushroom color="#3a301c" size="2.5rem" />
+        <StyledHeader>11:Lorem ipsum dolor sit amet</StyledHeader>
         <StyledSubtext>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+          12:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
           consectetur ut labore. Dolore, quasi ut.
         </StyledSubtext>
       </BulletpointsSection>

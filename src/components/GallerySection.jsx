@@ -10,7 +10,7 @@ const StyledBGSection = styled.section`
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-image: url(${background});
+  /* background-image: url(${background}); */
   background-position: center center;
   display: flex;
   flex-direction: column;
@@ -33,10 +33,10 @@ const GallerySection = () => {
     <>
       <StyledBGSection>
         <StyledContainer>
-          <StyledHeader>Gallery</StyledHeader>
+          <StyledHeader color='#1B1917'>20:Gallery</StyledHeader>
           <ImageListIndexPage />
           <Button>
-            <Link to={"/gallery"}>View gallery</Link>{" "}
+            <Link to={"/gallery"}>21:View gallery</Link>{" "}
           </Button>
         </StyledContainer>
       </StyledBGSection>

@@ -53,8 +53,18 @@ export default function LanguageSwitchBtns() {
       </Container>
 
       <MobileContainer>
-        <Button isEnglish onClick={changeLanguage}>
-          {isEnglish ? "NL" : "EN"}
+      <Button
+          highlighted={!isEnglish}
+          onClick={() => isEnglish && changeLanguage()}
+        >
+          NL
+        </Button>
+        <span style={{ color: "grey", fontSize: ".9rem" }}>/</span>
+        <Button
+          highlighted={isEnglish}
+          onClick={() => !isEnglish && changeLanguage()}
+        >
+          EN
         </Button>
       </MobileContainer>
     </>

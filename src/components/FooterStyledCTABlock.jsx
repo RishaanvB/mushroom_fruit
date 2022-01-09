@@ -23,8 +23,8 @@ const Subheader = styled.p`
 const FooterStyledCTABlock = () => {
   return (
     <StyledSection>
-      <StyledUnderLineHeader>grow your own reishi!</StyledUnderLineHeader>
-      <Subheader>Visit my partner's shop and order your own reishi..</Subheader>
+      <StyledUnderLineHeader>1:grow your own reishi!</StyledUnderLineHeader>
+      <Subheader>2:Visit my partner's shop and order your own reishi..</Subheader>
       <Button>
         {" "}
         <a
@@ -32,7 +32,7 @@ const FooterStyledCTABlock = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Order here!
+          3:Order here!
         </a>{" "}
       </Button>
     </StyledSection>

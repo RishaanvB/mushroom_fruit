@@ -36,9 +36,9 @@ const FooterSitemapLinks = () => {
         <GoChevronRight color="#F3BC77" size="1.2rem" />
         Home
       </StyledLink>
-      <StyledLink to="/how-it-grows">
+      <StyledLink to="/how-it-works">
         <GoChevronRight color="#F3BC77" size="1.2rem" />
-        How it grows
+        How it works
       </StyledLink>
       <StyledLink to="/consuming-reishi">
         <GoChevronRight color="#F3BC77" size="1.2rem" />

@@ -80,7 +80,7 @@ const StyledAvatarContainer = styled.address`
 `
 const About = () => {
   const { isEnglish } = useContext(languageContext)
-  const headerText = isEnglish ? "About me" : "Over mij"
+  const headerText = isEnglish ? "1:About me" : "1:Over mij"
   return (
     <Layout pageTitle="About me">
       <LayoutBackground background={background} headerText={headerText} />
@@ -97,12 +97,12 @@ const About = () => {
           <StyledAboutSection>
             <HeaderContainer>
               <StyledHeader>
-                {isEnglish ? " hugo engels" : "hugo nederlands"}
+                {isEnglish ? " 2:hugo engels" : "2:hugo nederlands"}
               </StyledHeader>
               <Divider />
             </HeaderContainer>
             <TextInfoIntro>
-              Ever since I graduated at Wageningen University in 2014, I have
+              3:Ever since I graduated at Wageningen University in 2014, I have
               been passionately growing all sorts of culinary and medicinal
               mushrooms. Soon I came across the Reishi mushroom and ever since
               that first encounter, I have focused my efforts on how to best
@@ -116,17 +116,17 @@ const About = () => {
             </div>
             <TextInfoIntro>
               {" "}
-              Because of all this, it is no wonder that I am delighted to share
-              this wonderful mushroom with others by offering Reishi mushroom
-              Growkits.
+              3:Because of all this, it is no wonder that I am delighted to
+              share this wonderful mushroom with others by offering Reishi
+              mushroom Growkits.
             </TextInfoIntro>
             <div style={{ display: "flex", marginBottom: "1rem" }}>
               <Divider />
             </div>
             <StyledContactSmall>
-              If you have any more questions, business inquiries, or just simply
-              would like to know more about me and my future endeavors, please
-              don't hesitate to contact me at the following address:
+              4:If you have any more questions, business inquiries, or just
+              simply would like to know more about me and my future endeavors,
+              please don't hesitate to contact me at the following address:
             </StyledContactSmall>
             <StyledAvatarContainer>
               <Avatar sx={{ bgcolor: "#F3BC77 " }}>
@@ -138,7 +138,7 @@ const About = () => {
                   style={{ textDecoration: "none", color: "black" }}
                   href="mailto:placeholder@mushroomfruit.com?subject=I want to know more about reishi."
                 >
-                  info@mushroomfruit.com
+                  placeholder@mushroomfruit.com
                 </a>{" "}
               </address>
             </StyledAvatarContainer>

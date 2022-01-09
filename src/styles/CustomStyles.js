@@ -31,7 +31,8 @@ const UnderlineHeader = styled.h1`
   text-align: center;
   margin-bottom: 4rem;
   position: relative;
-  color: white;
+  background-image: url(${props => props.background});
+  color: ${props => props.color ? props.color : 'white'};
   width: fit-content;
   @media screen and (min-width: 680px) {
     &::before {

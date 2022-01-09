@@ -26,7 +26,7 @@ const StyledBGSection = styled.section`
   }
 `
 const StyledSection = styled.section`
-  background-color: #322921d9;
+  background-color: #191c1bd9;
   display: flex;
 `
 const StyledBenefitContainer = styled.section`
@@ -73,27 +73,27 @@ const ReishiBenefitsSection = () => {
   return (
     <StyledBGSection>
       <Container>
-        <UnderlineHeader>Reishi Benefits</UnderlineHeader>
+        <UnderlineHeader>14:Reishi Benefits</UnderlineHeader>
       </Container>
       <StyledSection>
         <StyledContainer>
           <StyledBenefitContainer data-aos="zoom-in-up">
             <StyledSmallHeader>
-              Consuming <GiSlicedMushroom size="3rem" color="white" />
+              15:Consuming <GiSlicedMushroom size="3rem" color="white" />
             </StyledSmallHeader>
 
             <StyledInfoText>
-              In order to get the full benefits of our product check out our
+              16:In order to get the full benefits of our product check out our
               complete guide on growing and maintaining your reishi here.
             </StyledInfoText>
           </StyledBenefitContainer>
           <StyledBenefitContainer data-aos="zoom-in-up">
             <StyledSmallHeader>
-              Health <FaHeartbeat size="3rem" color="white" />
+              17:Health <FaHeartbeat size="3rem" color="white" />
             </StyledSmallHeader>
 
             <StyledInfoText>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+              18:Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
               asperiores sint voluptate rerum maiores. Laudantium, possimus.
               Aperiam totam ducimus ipsa?
             </StyledInfoText>
@@ -103,7 +103,7 @@ const ReishiBenefitsSection = () => {
       <Container>
         <StyledButton>
           {" "}
-          <Link to={"/consuming-reishi"}>Learn More</Link>{" "}
+          <Link to={"/consuming-reishi"}>19:Learn More</Link>{" "}
         </StyledButton>
       </Container>
     </StyledBGSection>
