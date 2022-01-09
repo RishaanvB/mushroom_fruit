@@ -55,72 +55,7 @@ const StyledTableHeader = MUIStyled(TableRow)(() => ({
   },
 }))
 
-function TablePaginationActions(props) {
-  const theme = useTheme()
-  const { count, page, rowsPerPage, onPageChange } = props
-
-  const handleFirstPageButtonClick = event => {
-    onPageChange(event, 0)
-  }
-
-  const handleBackButtonClick = event => {
-    onPageChange(event, page - 1)
-  }
-
-  const handleNextButtonClick = event => {
-    onPageChange(event, page + 1)
-  }
-
-  const handleLastPageButtonClick = event => {
-    onPageChange(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1))
-  }
-
-  return (
-    <Box sx={{ flexShrink: 0, ml: 2.5 }}>
-      <IconButton
-        onClick={handleFirstPageButtonClick}
-        disabled={page === 0}
-        aria-label="first page"
-      >
-        <FirstPageIcon />
-      </IconButton>
-      <IconButton
-        onClick={handleBackButtonClick}
-        disabled={page === 0}
-        aria-label="previous page"
-      >
-        <KeyboardArrowLeft />
-      </IconButton>
-      <IconButton
-        onClick={handleNextButtonClick}
-        disabled={page >= Math.ceil(count / rowsPerPage) - 1}
-        aria-label="next page"
-      >
-        <KeyboardArrowRight />
-      </IconButton>
-      <IconButton
-        onClick={handleLastPageButtonClick}
-        disabled={page >= Math.ceil(count / rowsPerPage) - 1}
-        aria-label="last page"
-      >
-        {theme.direction === "rtl" ? <FirstPageIcon /> : <LastPageIcon />}
-      </IconButton>
-    </Box>
-  )
-}
-
 export default function MushroomTable() {
-  const [page, setPage] = useState(0)
-  const [rowsPerPage, setRowsPerPage] = useState(10)
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage)
-  }
-
-  const handleChangeRowsPerPage = event => {
-    setRowsPerPage(parseInt(event.target.value, 10))
-    setPage(0)
-  }
   const data = useStaticQuery(graphql`
     {
       allTableDataCsv {
@@ -147,9 +82,7 @@ export default function MushroomTable() {
     }
   `)
   const dataArray = data.allTableDataCsv.edges
-  // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - dataArray.length) : 0
+
   return (
     <>
       <TableContainer
@@ -157,19 +90,19 @@ export default function MushroomTable() {
         sx={{ padding: "1rem", marginBottom: "4rem" }}
       >
         <Table
-          sx={{ minWidth: 650 }}
+          sx={{ minWidth: 650, marginBottom: 0 }}
           size="small"
           aria-label="a dense health related mushroom info table"
         >
           <caption
             style={{
               padding: "0",
-              margin: "0",
+              margin: "2rem 0 0 0",
               fontSize: ".8rem",
               maxWidth: "560px",
             }}
           >
-            Table with PubMed results – results found on 7 April 2021. Mushroom
+            Table with PubMed results - results found on 7 April 2021. Mushroom
             species was combined with the health related term in the regular
             search function.
           </caption>
@@ -191,54 +124,45 @@ export default function MushroomTable() {
             </StyledTableHeader>
           </TableHead>
           <TableBody>
-            {(rowsPerPage > 0
-              ? dataArray.slice(
-                  page * rowsPerPage,
-                  page * rowsPerPage + rowsPerPage
-                )
-              : dataArray
-            ).map((row, index) => (
+            {dataArray.map((row, index) => (
               <StyledTableRow key={row.node.Mushroom_species}>
                 {/* Loops through all nodes and creates TableCell Component column with the value for the category  */}
                 {Object.entries(row.node)
                   .filter(([key, value]) => key !== "id")
-                  .map(([key, value]) => (
-                    <TableCell
-                      sx={{ fontSize: "0.7rem" }}
-                      key={key}
-                      align="right"
-                    >
-                      {value}
-                    </TableCell>
-                  ))}
+                  .map(([key, value]) => {
+                    if (key === "Total") {
+                      return (
+                        <TableCell
+                          sx={{
+                            fontSize: "0.7rem",
+                            backgroundColor: `hsl(188, ${
+                              40 - 3 * index
+                            }%, 36%)`,
+                            fontWeight: "bold",
+                            color: "#f1f1f1",
+                          }}
+                          key={key}
+                          align="center"
+                        >
+                          {value}
+                        </TableCell>
+                      )
+                    } else
+                      return (
+                        <TableCell
+                          sx={{
+                            fontSize: "0.7rem",
+                          }}
+                          key={key}
+                          align="right"
+                        >
+                          {value}
+                        </TableCell>
+                      )
+                  })}
               </StyledTableRow>
             ))}
-            {emptyRows > 0 && (
-              <TableRow style={{ height: 38 * emptyRows }}>
-                <TableCell colSpan={6} />
-              </TableRow>
-            )}
           </TableBody>
-          <TableFooter>
-            <StyledTableRow>
-              <TablePagination
-                rowsPerPageOptions={[5, 10, { label: "All", value: -1 }]}
-                // colSpan={4}
-                count={dataArray.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                SelectProps={{
-                  inputProps: {
-                    "aria-label": "rows per page",
-                  },
-                  native: true,
-                }}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-                ActionsComponent={TablePaginationActions}
-              />
-            </StyledTableRow>
-          </TableFooter>
         </Table>
       </TableContainer>
     </>

@@ -555,10 +555,6 @@ th:first-child,
 td:first-child {
   padding-left: 0;
 }
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
@@ -586,7 +582,6 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-
 
 @media only screen and (max-width: 480px) {
   html {
