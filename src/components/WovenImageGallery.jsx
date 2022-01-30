@@ -3,9 +3,27 @@ import React, { useEffect, useState } from "react"
 import ImageList from "@mui/material/ImageList"
 import ImageListItem from "@mui/material/ImageListItem"
 import ImageListItemBar from "@mui/material/ImageListItemBar"
+import ImageModal from "./ImageModal"
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+
+// import Box from "@mui/material/Box"
+// import Button from "@mui/material/Button"
+// import Typography from "@mui/material/Typography"
+// import Modal from "@mui/material/Modal"
+
+/* const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+} */
 
 export default function WovenImageList() {
   const data = useStaticQuery(graphql`
@@ -17,6 +35,7 @@ export default function WovenImageList() {
               gatsbyImageData
             }
             name
+            relativePath
           }
         }
       }
@@ -40,12 +59,23 @@ export default function WovenImageList() {
   })
   const [cols, setCols] = useState()
 
+  const [open, setOpen] = React.useState(false)
+  const [path, setPath] = useState('')
+  
+  const handleOpen = name => {
+    console.log(name, "image name")
+    setOpen(true)
+    setPath(name)
+  }
+  const handleClose = () => setOpen(false)
+
   const images = data.allFile.edges.map(imageNode => (
     <ImageListItem key={imageNode.node.name}>
       <GatsbyImage
         image={getImage(imageNode.node)}
         alt={imageNode.node.name}
         key={imageNode.node.name}
+        onClick={()=>handleOpen(imageNode.node.relativePath)}
       />
       <ImageListItemBar position="below" title={imageNode.node.name} />
     </ImageListItem>
@@ -61,6 +91,8 @@ export default function WovenImageList() {
       >
         {images}
       </ImageList>
+
+      <ImageModal open={open} handleClose={handleClose} relativePath={path} />
     </>
   )
 }
