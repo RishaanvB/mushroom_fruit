@@ -56,26 +56,30 @@ export default function WovenImageList() {
     }
     window.addEventListener("resize", listener)
     return () => window.removeEventListener("resize", listener)
-  })
+  }, [])
+
   const [cols, setCols] = useState()
+  const [open, setOpen] = useState(false)
+  const [index, setIndex] = useState()
 
-  const [open, setOpen] = React.useState(false)
-  const [path, setPath] = useState('')
-  
-  const handleOpen = name => {
-    console.log(name, "image name")
+  const allImages = data.allFile.edges
+
+  const handleOpen = newIndex => {
     setOpen(true)
-    setPath(name)
+    setIndex(newIndex)
   }
-  const handleClose = () => setOpen(false)
 
-  const images = data.allFile.edges.map(imageNode => (
+  const handleClose = () => setOpen(false)
+  const handleNext = () => setIndex(index + 1)
+  const handlePrevious = () => setIndex(index - 1)
+
+  const images = data.allFile.edges.map((imageNode, newIndex) => (
     <ImageListItem key={imageNode.node.name}>
       <GatsbyImage
         image={getImage(imageNode.node)}
         alt={imageNode.node.name}
         key={imageNode.node.name}
-        onClick={()=>handleOpen(imageNode.node.relativePath)}
+        onClick={() => handleOpen(newIndex)}
       />
       <ImageListItemBar position="below" title={imageNode.node.name} />
     </ImageListItem>
@@ -92,7 +96,14 @@ export default function WovenImageList() {
         {images}
       </ImageList>
 
-      <ImageModal open={open} handleClose={handleClose} relativePath={path} />
+      <ImageModal
+        open={open}
+        handleClose={handleClose}
+        index={index}
+        handleNext={handleNext}
+        handlePrevious={handlePrevious}
+        allImages={allImages}
+      />
     </>
   )
 }

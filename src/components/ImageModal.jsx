@@ -1,52 +1,33 @@
-import React, { useState} from "react"
+import React from "react"
 import Box from "@mui/material/Box"
 import Modal from "@mui/material/Modal"
 import Fade from "@mui/material/Fade"
 import Backdrop from "@mui/material/Backdrop"
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useStaticQuery, graphql } from "gatsby"
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  bgcolor: "background.paper",
-  //   maxHeight: "100%",
-  //   maxWidth: "100%",
+  bgcolor: "#11100f",
   boxShadow: 24,
+  minWidth: "60vw",
 }
 
-export default function ImageModal(props) {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
-        edges {
-          node {
-            childImageSharp {
-              gatsbyImageData
-            }
-            name
-            relativePath
-          }
-        }
-      }
-    }
-  `)
-  const [currentImageIndex, setCurrentImageIndex] = useState()
-
-  console.log(props.relativePath, "relative path in imagemodal")
-  const imageFoundIndex = data.allFile.edges.findIndex(
-    img => img.node.relativePath === props.relativePath
-    )
-    // setCurrentImageIndex(imageFoundIndex)
-    console.log(imageFoundIndex, "imagefound")
-    const currentImg = data.allFile.edges[currentImageIndex]
+export default function ImageModal({
+  open,
+  handleClose,
+  index,
+  handleNext,
+  handlePrevious,
+  allImages,
+}) {
   return (
     <Modal
-      open={props.open}
-      onClose={props.handleClose}
+      open={open}
+      onClose={handleClose}
       closeAfterTransition
       BackdropComponent={Backdrop}
       BackdropProps={{
@@ -55,18 +36,37 @@ export default function ImageModal(props) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Fade in={props.open}>
+      <Fade in={open}>
         <Box sx={style}>
+          <h1
+            onClick={handlePrevious}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: 0,
+              zIndex: 10000,
+              color: "white",
+            }}
+          >
+            Next
+          </h1>
           <GatsbyImage
-            image={getImage(currentImg?.node)}
+            image={getImage(allImages[index]?.node)}
             alt={"alt image"}
-            //   style={{position:'relative'}}
+            objectPosition={"center center"}
+            style={{ display: "grid", placeItems: "center" }}
+            objectFit={"contain"}
           />
           <h1
-            onClick={() => console.log("hallo")}
-            style={{ position: "absolute", top: 0, left: 0 }}
+            onClick={handleNext}
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: 0,
+              color: "white",
+            }}
           >
-            Hallo
+            Next
           </h1>
         </Box>
       </Fade>
