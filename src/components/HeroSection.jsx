@@ -52,13 +52,12 @@ const HeroSection = () => {
     <StyledBGSection>
       <Container>
         <StyledHeader style={left2Right}>
-          1:Grow your own indoor mushroom!
+          Grow your own indoor mushroom!
         </StyledHeader>
 
         <section style={{ overflow: "hidden" }}>
           <StyledSubHeader style={top2Bottom}>
-            2:Now is your chance! With the Reishi Growkit from Mushroomfruit,
-            growing indoors has never been easier !
+            With the Reishi Growkit from Mushroomfruit
           </StyledSubHeader>
         </section>
         <Button>
@@ -68,7 +67,7 @@ const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            3:Order here!
+            Order here!
           </a>{" "}
         </Button>
       </Container>

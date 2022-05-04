@@ -13,7 +13,7 @@ const Button = styled(animated.button)`
   color: black;
   background-color: #f3bc77;
   cursor: pointer;
-  box-shadow: 1px 1px 5px 2px rgba(63, 63, 63, 0.37);
+  box-shadow:1px 2px 5px 1px rgb(63 63 63 / 45%);
   transition: background-color 0.2s ease-in;
   & > * {
     text-decoration: none;

@@ -13,7 +13,6 @@ import "aos/dist/aos.css"
 const StyledBulletpointsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-left: 5rem; */
   align-items: center;
   justify-content: space-between;
   align-self: center;
@@ -30,16 +29,16 @@ const BulletpointsSection = styled.section`
   margin-top: 1rem;
 `
 const StyledHeader = styled.h1`
-  /* color: white; */
   font-size: 1.2rem;
   grid-column: 2;
   margin-bottom: 0;
+  font-weight: normal;
 `
 const StyledSubtext = styled.p`
-  /* color: white; */
   font-size: 0.9rem;
   grid-column: 2;
   margin: 0;
+  margin-top: 1rem;
 `
 
 const BulletpointsContainer = () => {
@@ -52,35 +51,40 @@ const BulletpointsContainer = () => {
   return (
     <StyledBulletpointsContainer>
       <BulletpointsSection data-aos="fade-up">
-        <GiMushroomGills color="#504021" size="2.5rem" />
-        <StyledHeader>5:Lorem ipsum dolor sit amet</StyledHeader>
+        <GiMushroomGills color="rgb(54 69 106)" size="2.5rem" />
+        <StyledHeader>
+          The Reishi mushroom grows through the substrate package.
+        </StyledHeader>
         <StyledSubtext>
-          6:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-          consectetur ut labore. Dolore, quasi ut.
+          The substrate consists of water, sawdust, wheat grain and gypsum.
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiSuperMushroom color="#3b2e13" size="2.5rem" />
-        <StyledHeader>7:Lorem ipsum dolor sit amet</StyledHeader>
+        <GiSuperMushroom color="rgb(106 26 25)" size="2.5rem" />
+        <StyledHeader>
+          After some time, the Reishi mushroom will grow out at the top.
+        </StyledHeader>
         <StyledSubtext>
-          8:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-          consectetur ut labore. Dolore, quasi ut.
+          This process goes automatically, without the need to open the package.
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiSpottedMushroom color="#523f18" size="2.5rem" />
-        <StyledHeader>9:Lorem ipsum dolor sit amet</StyledHeader>
+        <GiSpottedMushroom color="rgb(77 74 36)" size="2.5rem" />
+        <StyledHeader>
+          The Reishi fruiting body will continue to grow for multiple months.
+        </StyledHeader>
         <StyledSubtext>
-          10:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-          consectetur ut labore. Dolore, quasi ut.
+          This is a beautiful process during which the mushroom will have many
+          colors.
         </StyledSubtext>
       </BulletpointsSection>
       <BulletpointsSection data-aos="fade-up">
-        <GiTrunkMushroom color="#3a301c" size="2.5rem" />
-        <StyledHeader>11:Lorem ipsum dolor sit amet</StyledHeader>
+        <GiTrunkMushroom color="rgb(11 64 7)" size="2.5rem" />
+        <StyledHeader>
+          After a few months, the mushroom can be harvested
+        </StyledHeader>
         <StyledSubtext>
-          12:Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-          consectetur ut labore. Dolore, quasi ut.
+          Harvested Reishi mushrooms can be used to make medicinal tea.
         </StyledSubtext>
       </BulletpointsSection>
     </StyledBulletpointsContainer>

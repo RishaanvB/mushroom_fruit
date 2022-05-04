@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import { Button, Container, UnderlineHeader } from "../styles/CustomStyles"
 
-import background from "../images/banner-howitworks.png"
+import background from "../images/banner-howitworks.png"  // don't remove, should be used as background image in StyledBGSection component
 import { GiSlicedMushroom } from "react-icons/gi"
 import { FaHeartbeat } from "react-icons/fa"
 import { Link } from "gatsby"
@@ -11,11 +11,10 @@ import "aos/dist/aos.css"
 
 const StyledBGSection = styled.section`
   width: 100%;
-  /* height: 100vh; */
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1548048211-357ddb2c920f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+  background-image: url("https://images.unsplash.com/photo-1548048211-357ddb2c920f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   background-position: center right;
   display: flex;
   flex-direction: column;
@@ -73,29 +72,33 @@ const ReishiBenefitsSection = () => {
   return (
     <StyledBGSection>
       <Container>
-        <UnderlineHeader>14:Reishi Benefits</UnderlineHeader>
+        <UnderlineHeader>Consuming Reishi</UnderlineHeader>
       </Container>
       <StyledSection>
         <StyledContainer>
           <StyledBenefitContainer data-aos="zoom-in-up">
             <StyledSmallHeader>
-              15:Consuming <GiSlicedMushroom size="3rem" color="white" />
+              How to prepare
+              <GiSlicedMushroom size="3rem" color="white" />
             </StyledSmallHeader>
 
             <StyledInfoText>
-              16:In order to get the full benefits of our product check out our
-              complete guide on growing and maintaining your reishi here.
+              To get the most out of Reishi's bio-active compounds, check out
+              the complete guide on how to harvest and process the Reishi
+              fruiting body into a medicinal tea.
             </StyledInfoText>
           </StyledBenefitContainer>
           <StyledBenefitContainer data-aos="zoom-in-up">
             <StyledSmallHeader>
-              17:Health <FaHeartbeat size="3rem" color="white" />
+              Benefits to health <FaHeartbeat size="3rem" color="white" />
             </StyledSmallHeader>
 
             <StyledInfoText>
-              18:Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
-              asperiores sint voluptate rerum maiores. Laudantium, possimus.
-              Aperiam totam ducimus ipsa?
+              The Reishi fruiting body contains a wealth of bio-active
+              compounds, that can have a direct effect on all sorts of health
+              factors in the human body. These include polysaccharides such as
+              β-glucans, triterpenoids such as ganoderic acids, and
+              glycoproteins such as Ling Zhi-8.
             </StyledInfoText>
           </StyledBenefitContainer>
         </StyledContainer>
@@ -103,7 +106,7 @@ const ReishiBenefitsSection = () => {
       <Container>
         <StyledButton>
           {" "}
-          <Link to={"/consuming-reishi"}>19:Learn More</Link>{" "}
+          <Link to={"/consuming-reishi"}>Learn More</Link>{" "}
         </StyledButton>
       </Container>
     </StyledBGSection>

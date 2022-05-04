@@ -10,21 +10,24 @@ const StyledSection = styled.div`
   margin-bottom: auto;
   row-gap: 1rem;
 `
-const StyledUnderLineHeader = styled(UnderlineHeader)`
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-`
-const Subheader = styled.p`
+
+const SubHeader = styled.p`
   font-size: 0.8rem;
+  color: white;
+`
+const StyledHeader = styled.p`
+  line-height: 1.5em;
+  font-size: 1.4rem;
   color: white;
 `
 
 const FooterStyledCTABlock = () => {
   return (
     <StyledSection>
-      <StyledUnderLineHeader>1:grow your own reishi!</StyledUnderLineHeader>
-      <Subheader>2:Visit my partner's shop and order your own reishi..</Subheader>
+      <StyledHeader>Want to grow a Reishi mushroom?</StyledHeader>
+      <SubHeader>
+        Visit my partner's webshop and order your own Reishi grow kit.
+      </SubHeader>
       <Button>
         {" "}
         <a
@@ -32,7 +35,7 @@ const FooterStyledCTABlock = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          3:Order here!
+          Order here!
         </a>{" "}
       </Button>
     </StyledSection>

@@ -15,7 +15,7 @@ import { RiPlantLine } from "react-icons/ri"
 import { GiMushroomGills, GiPlantWatering } from "react-icons/gi"
 
 // display text for labels
-const steps = ["1:Plant a seed", "2:Watch it grow", "3:Enjoy!"]
+const steps = ["Unpack the box", "Start fruiting", "Harvest"]
 
 // styled components
 const StyledBox = styled(Box)`
@@ -109,7 +109,6 @@ export default function HorizontalNonLinearStepper() {
     setDirection(-1)
   }
 
-
   const handleStep = step => () => {
     setActiveStep(step)
   }
@@ -141,8 +140,8 @@ export default function HorizontalNonLinearStepper() {
         handleNext={handleNext}
         handleBack={handleBack}
         direction={direction}
-        isFirstStep={ isFirstStep}
-        isLastStep={ isLastStep}
+        isFirstStep={isFirstStep}
+        isLastStep={isLastStep}
       />
     </StyledContainer>
   )

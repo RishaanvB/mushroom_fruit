@@ -25,7 +25,7 @@ const HowItWorksSection = () => {
   return (
     <StyledBGSection>
       <Container>
-        <UnderlineHeader color="#1B1917">4:How it works</UnderlineHeader>
+        <UnderlineHeader color="#1B1917">How it works</UnderlineHeader>
         <HowItWorksContainer />
       </Container>
     </StyledBGSection>

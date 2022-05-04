@@ -28,17 +28,17 @@ const CustomUnderlineHeader = styled(UnderlineHeader)`
 
 const Faq = () => {
   const { isEnglish } = useContext(languageContext)
-  const headerText = isEnglish
-    ? "1:Frequently Asked Questions"
-    : "1:placeholder FAQ"
+  const headerText = "FAQ"
   return (
     <Layout pageTitle="FAQ">
       <LayoutBackground background={background} headerText={headerText} />
       <Container>
-        <CustomUnderlineHeader>2:Have any questions?</CustomUnderlineHeader>
+        <CustomUnderlineHeader>
+          Frequently Asked Questions (FAQ)
+        </CustomUnderlineHeader>
         <StyledSubheader>
-          3:Check below. If you can't find what you're looking for, please let
-          me know.
+          If you can’t find the answer to your question below, feel free to
+          contact me.
         </StyledSubheader>
         <CustomStyledGridContainer>
           <CustomAccordion />

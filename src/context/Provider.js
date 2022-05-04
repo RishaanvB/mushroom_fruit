@@ -6,7 +6,7 @@ export const languageContext = React.createContext({
 })
 
 const Provider = props => {
-  const [isEnglish, SetIsEnglish] = useState(false)
+  const [isEnglish, SetIsEnglish] = useState(true)
   const changeLanguage = () => SetIsEnglish(!isEnglish)
   return (
     <languageContext.Provider

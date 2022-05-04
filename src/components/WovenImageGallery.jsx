@@ -63,7 +63,7 @@ export default function WovenImageList() {
   const [index, setIndex] = useState()
 
   const allImages = data.allFile.edges
-
+  console.log(allImages)
   const handleOpen = newIndex => {
     setOpen(true)
     setIndex(newIndex)
@@ -80,6 +80,7 @@ export default function WovenImageList() {
         alt={imageNode.node.name}
         key={imageNode.node.name}
         onClick={() => handleOpen(newIndex)}
+        prop={imageNode.node.name}
       />
       <ImageListItemBar position="below" title={imageNode.node.name} />
     </ImageListItem>

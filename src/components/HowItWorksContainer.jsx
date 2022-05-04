@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import BulletpointsContainer from "./BulletpointsContainer"
@@ -28,7 +28,7 @@ const HowItWorksContainer = () => {
         <BulletpointsContainer />
       </StyledHowItWorksContainer>
       <Button>
-        <Link to="/how-it-grows">13:Show more</Link>{" "}
+        <Link to="/how-it-grows">Show more</Link>{" "}
       </Button>
     </>
   )

@@ -5,16 +5,12 @@ import Footer from "./footer"
 import { Helmet } from "react-helmet"
 import { languageContext } from "../context/Provider"
 const Layout = ({ children, pageTitle }) => {
-  useEffect(
-    () => (document.title = `Mushroom Fruit | ${pageTitle}` || "Mushroom Fruit")
-  )
-
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         {/* <!-- Primary Meta Tags --> */}
-        <title>Mushroomfruit - Grow your own reishi!</title>
+        <title>Mushroomfruit | {pageTitle}</title>
         <meta name="title" content="Mushroomfruit - Grow your own reishi!" />
         <meta
           name="description"
@@ -40,7 +36,7 @@ const Layout = ({ children, pageTitle }) => {
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:url" content="https://mushroomfruit.com/" />
         <meta
           property="twitter:title"
           content="Mushroomfruit - Grow your own reishi!"

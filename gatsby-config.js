@@ -4,7 +4,7 @@ module.exports = {
     description: `Mushroom related website providing reishi information and reishi growkits`,
     author: `rvanbeveren`,
     siteUrl: `https://mushroomfruit.com`,
-    image: "/icon.png",
+    image: "/icon.ico",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         theme_color: `#F3BC77`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.ico`, // This path is relative to the root of the site.
       },
     },
     {

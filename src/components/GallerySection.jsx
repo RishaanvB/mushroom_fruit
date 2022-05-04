@@ -33,10 +33,10 @@ const GallerySection = () => {
     <>
       <StyledBGSection>
         <StyledContainer>
-          <StyledHeader color='#1B1917'>20:Gallery</StyledHeader>
+          <StyledHeader color='#1B1917'>Gallery</StyledHeader>
           <ImageListIndexPage />
           <Button>
-            <Link to={"/gallery"}>21:View gallery</Link>{" "}
+            <Link to={"/gallery"}>View gallery</Link>{" "}
           </Button>
         </StyledContainer>
       </StyledBGSection>

@@ -39,7 +39,7 @@ const Footer = () => {
       </StyledContainer>
       <CopyrightContainer as="footer">
         <small style={{ paddingLeft: "1rem" }}>
-          &copy; 2021 MushroomFruit. All rights reserved.{" "}
+          &copy; 2022 MushroomFruit. All rights reserved.{" "}
         </small>
       </CopyrightContainer>
     </StyledBackgroundFill>
