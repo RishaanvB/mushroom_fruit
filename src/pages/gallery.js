@@ -22,7 +22,7 @@ const Gallery = () => {
     <Layout pageTitle="Gallery">
       <LayoutBackground headerText={headerText} background={background} />
       <StyledContainer>
-        <WovenImageGallery />
+        {/* <WovenImageGallery /> */}
       </StyledContainer>
     </Layout>
   )
