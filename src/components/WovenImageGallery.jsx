@@ -82,7 +82,7 @@ export default function WovenImageList() {
         onClick={() => handleOpen(newIndex)}
         prop={imageNode.node.name}
       />
-      <ImageListItemBar position="below" title={imageNode.node.name} />
+      {/* <ImageListItemBar position="below" title={imageNode.node.name} /> */}
     </ImageListItem>
   ))
 
