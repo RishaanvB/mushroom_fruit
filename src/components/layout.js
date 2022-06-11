@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useContext } from "react"
+import React from "react"
 import "./layout.css"
 import MainHeader from "./mainheader"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
-import { languageContext } from "../context/Provider"
 const Layout = ({ children, pageTitle }) => {
   return (
     <>

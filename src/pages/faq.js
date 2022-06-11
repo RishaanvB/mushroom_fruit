@@ -1,10 +1,10 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
 import LayoutBackground from "../styles/LayoutBackground"
 import CustomAccordion from "../components/CustomAccordion"
-import { languageContext } from "../context/Provider"
+ 
 
 import { Container, UnderlineHeader } from "../styles/CustomStyles"
 
@@ -27,7 +27,7 @@ const CustomUnderlineHeader = styled(UnderlineHeader)`
 `
 
 const Faq = () => {
-  const { isEnglish } = useContext(languageContext)
+   
   const headerText = "FAQ"
   return (
     <Layout pageTitle="FAQ">

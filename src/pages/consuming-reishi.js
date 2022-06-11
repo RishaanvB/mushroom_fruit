@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import LayoutBackground from "../styles/LayoutBackground"
 import MushroomTable from "../components/MushroomTable"
 
-import { languageContext } from "../context/Provider"
+ 
 
 import { Container, UnderlineHeader } from "../styles/CustomStyles"
 
@@ -39,9 +39,9 @@ const StyledBottomP = styled.p`
   margin: 2rem 0 4rem 0;
 `
 const ConsumingReishi = () => {
-  const { isEnglish } = useContext(languageContext)
+   
 
-  const headerText = isEnglish ? "consuming reishi" : "consumeren reishi"
+  const headerText = "consuming reishi"
   return (
     <Layout pageTitle="Consuming reishi">
       <LayoutBackground background={background} headerText={headerText} />

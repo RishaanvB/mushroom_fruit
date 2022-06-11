@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import WovenImageGallery from "../components/WovenImageGallery"
-import { languageContext } from "../context/Provider"
+ 
 
 import LayoutBackground from "../styles/LayoutBackground"
 import { Container } from "../styles/CustomStyles"
@@ -16,8 +16,8 @@ const StyledContainer = styled(Container)`
 `
 
 const Gallery = () => {
-  const { isEnglish } = useContext(languageContext)
-  const headerText = isEnglish ? "Gallery" : "gallerij"
+   
+  const headerText = "Gallery"
   return (
     <Layout pageTitle="Gallery">
       <LayoutBackground headerText={headerText} background={background} />

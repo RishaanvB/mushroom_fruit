@@ -1,8 +1,7 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Container, Button } from "../styles/CustomStyles"
 import { useSpring, animated } from "react-spring"
-import { languageContext } from "../context/Provider"
 
 const StyledBGSection = styled.section`
   width: 100%;
@@ -37,7 +36,6 @@ const StyledSubHeader = styled(animated.p)`
 `
 
 const HeroSection = () => {
-  const { isEnglish, changeLanguage } = useContext(languageContext)
 
   const left2Right = useSpring({
     from: { transform: "translateX(-50px)", opacity: 0 },

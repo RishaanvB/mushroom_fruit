@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { AiFillTwitterCircle } from "react-icons/ai"
-import { RiFacebookCircleFill, RiInstagramFill } from "react-icons/ri"
+import { RiInstagramFill } from "react-icons/ri"
 
 const StyledLinkContainer = styled.div`
   align-self: flex-end;
@@ -25,23 +24,7 @@ const FooterSocialsContainer = () => {
     <StyledLinkContainer>
       <StyledSocials
         style={{ display: "block" }}
-        href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <AiFillTwitterCircle size="2.5rem" />
-      </StyledSocials>
-      <StyledSocials
-        style={{ display: "block" }}
-        href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <RiFacebookCircleFill size="2.5rem" />
-      </StyledSocials>
-      <StyledSocials
-        style={{ display: "block" }}
-        href="https://groenetakken.nl/product/reishi-kweekpakket-kopie/"
+        href="https://www.instagram.com/hugodevriesmushrooms/"
         target="_blank"
         rel="noopener noreferrer"
       >

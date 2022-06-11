@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import { StaticImage } from "gatsby-plugin-image"
@@ -10,10 +10,9 @@ import LayoutBackground from "../styles/LayoutBackground"
 import { Container } from "../styles/CustomStyles"
 
 import { HiOutlineMail } from "react-icons/hi"
-import { languageContext } from "../context/Provider"
+ 
 
 import background from "../images/banner_about.png"
-import profilePic from "../images/hugo_aboutme.jpg"
 
 const StyledHeader = styled.h1`
   position: relative;
@@ -82,7 +81,7 @@ const StyledAvatarContainer = styled.address`
   margin-top: 1rem;
 `
 const About = () => {
-  const { isEnglish } = useContext(languageContext)
+   
   const headerText = "About me"
   return (
     <Layout pageTitle="About me">
