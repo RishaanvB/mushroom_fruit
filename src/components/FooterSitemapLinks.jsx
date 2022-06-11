@@ -29,33 +29,53 @@ const StyledLink = styled(Link)`
   }
 `
 
+const ListItem = styled.li`
+list-style-type: none;
+`
 const FooterSitemapLinks = () => {
   return (
     <StyledLinksContainer>
-      <StyledLink to="/">
-        <GoChevronRight color="#F3BC77" size="1.2rem" />
-        Home
-      </StyledLink>
-      <StyledLink to="/how-it-works">
-        <GoChevronRight color="#F3BC77" size="1.2rem" />
-        How it works
-      </StyledLink>
-      <StyledLink to="/consuming-reishi">
-        <GoChevronRight color="#F3BC77" size="1.2rem" />
-        Consuming reishi
-      </StyledLink>
-      <StyledLink to="/faq">
-        <GoChevronRight color="#F3BC77" size="1.2rem" />
-        Faq
-      </StyledLink>
-      <StyledLink to="/gallery">
-        <GoChevronRight color="#F3BC77" size="1.2rem" />
-        Gallery
-      </StyledLink>
-      <StyledLink to="/about">
-        <GoChevronRight color="#F3BC77" size="1.2rem" />
-        About me
-      </StyledLink>
+      <ListItem>
+        <StyledLink to="/">
+          <GoChevronRight color="#F3BC77" size="1.2rem" />
+          Home
+        </StyledLink>
+      </ListItem>
+
+      <ListItem>
+        <StyledLink to="/how-it-works">
+          <GoChevronRight color="#F3BC77" size="1.2rem" />
+          How it works
+        </StyledLink>
+      </ListItem>
+      <ListItem>
+
+        <StyledLink to="/consuming-reishi">
+          <GoChevronRight color="#F3BC77" size="1.2rem" />
+          Consuming reishi
+        </StyledLink>
+      </ListItem>
+     
+      <ListItem>
+        <StyledLink to="/faq">
+          <GoChevronRight color="#F3BC77" size="1.2rem" />
+          Faq
+        </StyledLink>
+      </ListItem>
+     
+      <ListItem>
+        <StyledLink to="/gallery">
+          <GoChevronRight color="#F3BC77" size="1.2rem" />
+          Gallery
+        </StyledLink>
+      </ListItem>
+     
+      <ListItem>
+        <StyledLink to="/about">
+          <GoChevronRight color="#F3BC77" size="1.2rem" />
+          About me
+        </StyledLink>
+      </ListItem>
     </StyledLinksContainer>
   )
 }

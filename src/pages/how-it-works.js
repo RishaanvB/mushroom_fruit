@@ -7,7 +7,7 @@ import HorizontalNonLinearStepper from "../components/howitworks/HorizontalNonLi
 import { Container } from "../styles/CustomStyles"
 import LayoutBackground from "../styles/LayoutBackground"
 
-import background from "../images/banner-howitworks.png"
+import background from "../images/banner-howitworks.webp"
 
 const HowItWorks = () => {
    

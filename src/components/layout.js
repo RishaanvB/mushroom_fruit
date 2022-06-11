@@ -6,8 +6,13 @@ import { Helmet } from "react-helmet"
 const Layout = ({ children, pageTitle }) => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Helmet
+      htmlAttributes={{
+        lang: 'en-US',
+      }}
+      >
+        
+        <meta charSet="utf-8" lang="en" />
         {/* <!-- Primary Meta Tags --> */}
         <title>Mushroomfruit | {pageTitle}</title>
         <meta name="title" content="Mushroomfruit - Grow your own reishi!" />
